@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="fragments/header :: head">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- Hero Section -->
+    <section class="futuro-hero bg-gradient-dark text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">El Futuro de la Movilidad Urbana</h1>
+                    <p class="lead mb-4">
+                        Descubre cómo la inteligencia artificial y los estacionamientos 
+                        inteligentes están transformando las ciudades del mañana.
+                    </p>
+                    <div class="hero-badges">
+                        <span class="badge bg-primary me-2 mb-2">IA Predictiva</span>
+                        <span class="badge bg-success me-2 mb-2">Sostenibilidad</span>
+                        <span class="badge bg-info me-2 mb-2">Ciudades Inteligentes</span>
+                        <span class="badge bg-warning me-2 mb-2">Movilidad Integrada</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-city fa-10x text-warning opacity-25"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Sections -->
+    <section class="vision-sections py-5">
+        <div class="container">
+            <!-- Vision 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="vision-image text-center">
+                        <i class="fas fa-robot fa-8x text-primary mb-4"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Gestión Autónoma con IA</h2>
+                    <p class="lead mb-4">
+                        Los sistemas de estacionamiento operarán de forma autónoma, 
+                        optimizando espacios y flujos vehiculares sin intervención humana.
+                    </p>
+                    <ul class="vision-list">
+                        <li><i class="fas fa-check text-success me-2"></i>Asignación automática de plazas</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Predicción de demanda en tiempo real</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Optimización continua de tarifas</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Integración con vehículos autónomos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vision 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="vision-image text-center">
+                        <i class="fas fa-bolt fa-8x text-warning mb-4"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="fw-bold mb-4">Movilidad Eléctrica Integrada</h2>
+                    <p class="lead mb-4">
+                        Los estacionamientos se convertirán en hubs de carga para 
+                        vehículos eléctricos, facilitando la transición energética.
+                    </p>
+                    <ul class="vision-list">
+                        <li><i class="fas fa-check text-success me-2"></i>Estaciones de carga inteligentes</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Gestión optimizada de energía</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Integración con redes eléctricas</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Reservas de carga anticipadas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vision 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="vision-image text-center">
+                        <i class="fas fa-chart-network fa-8x text-info mb-4"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Ecosistema de Movilidad Conectada</h2>
+                    <p class="lead mb-4">
+                        Los estacionamientos serán nodos interconectados en un 
+                        ecosistema completo de movilidad urbana inteligente.
+                    </p>
+                    <ul class="vision-list">
+                        <li><i class="fas fa-check text-success me-2"></i>Integración con transporte público</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Plataformas multimodales</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Datos abiertos para planificación urbana</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Experiencia de usuario unificada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Vision Generator -->
+    <section class="ai-vision-generator py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Genera tu Propia Visión con IA</h2>
+                    <p class="lead">
+                        Utiliza nuestro asistente de IA para explorar diferentes escenarios 
+                        futuros de movilidad urbana y estacionamientos inteligentes.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div th:replace="fragments/ai-widget :: ai-widget"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 bg-gradient-primary text-white text-center">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-4">Sé Parte del Cambio</h2>
+            <p class="lead mb-4">
+                Únete a Parkea Ya y contribuye a construir el futuro de la movilidad urbana.
+            </p>
+            <a th:href="@{/solicitar-acceso}" class="btn btn-light btn-lg me-3">
+                <i class="fas fa-rocket me-2"></i>Solicitar Acceso
+            </a>
+            <a th:href="@{/ia-generador}" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-robot me-2"></i>Explorar con IA
+            </a>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head th:replace="~{fragments/header :: head}">
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+</head>
+
+<body>
+    <div th:replace="~{fragments/header :: header}"></div>
+
+    <!-- Hero Section con Carrusel de Imágenes -->
+    <section class="hero-section">
+        <div class="hero-carousel">
+            <!-- Imagen 1 -->
+            <div class="carousel-slide active">
+                <img th:src="@{/images/estaciomiento1.jpg}" alt="Estacionamiento Moderno" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Imagen 2 -->
+            <div class="carousel-slide">
+                <img th:src="@{/images/estacionamiento2.jpg}" alt="App Parkea Ya" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Imagen 3 -->
+            <div class="carousel-slide">
+                <img th:src="@{/images/estaciomientos3.jpg}" alt="Ciudad Inteligente" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Imagen 4 -->
+            <div class="carousel-slide">
+                <img th:src="@{/images/estaciomiento4.jpeg}" alt="Tecnología Avanzada" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <div id="hero-carousel-controls" class="carousel-controls" role="region"
+            aria-label="Controles del carrusel principal">
+            <button class="carousel-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="innovation-badge mb-4">
+                            <span class="badge-content">
+                                <i class="fas fa-bolt me-2"></i>
+                                Plataforma Inteligente
+                            </span>
+                        </div>
+
+                        <h1 class="hero-title mb-4">
+                            <span class="title-main">Parkea Ya</span>
+                            <span class="title-subtitle">Estacionamiento Inteligente</span>
+                        </h1>
+
+                        <p class="hero-description mb-5">
+                            La plataforma digital que revoluciona la movilidad urbana conectando conductores con
+                            estacionamientos verificados en tiempo real.
+                            <strong>Optimizamos espacios, reducimos emisiones y mejoramos la experiencia de
+                                movilidad</strong> para ciudades más inteligentes.
+                        </p>
+
+                        <div class="hero-actions mb-5">
+                            <div class="action-buttons">
+                                <a th:href="@{/solicitar-acceso}" class="btn btn-primary btn-hero me-3">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>Registrar Estacionamiento</span>
+                                </a>
+                                <a th:href="@{/descargar-app}" class="btn btn-outline-light btn-hero">
+                                    <i class="fas fa-mobile-alt me-2"></i>
+                                    <span>Descargar App</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-stats-large">
+                        <div class="stats-card">
+                            <div class="stat-item-large">
+                                <div class="stat-number">+50%</div>
+                                <div class="stat-label">Eficiencia en búsqueda</div>
+                            </div>
+                            <div class="stat-item-large">
+                                <div class="stat-number">-30%</div>
+                                <div class="stat-label">Emisiones CO₂</div>
+                            </div>
+                            <div class="stat-item-large">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Estacionamientos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Características con Imágenes Grandes -->
+    <!-- Sección de Características con Tarjetas -->
+    <section class="features-large-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-large">Características Principales</h2>
+                <p class="section-subtitle-large">
+                    Descubre todas las funcionalidades que hacen de Parkea Ya la mejor opción para tu estacionamiento
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Mapa en Tiempo Real -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="feature-title-large">Mapa en Tiempo Real</h3>
+                    </div>
+                    <div class="feature-image-compact">
+                        <img th:src="@{/images/mapamaps.jpg}" alt="Mapa en Tiempo Real" class="img-fluid">
+                    </div>
+                    <p class="feature-description-large">
+                        Visualiza la disponibilidad de estacionamientos en tiempo real con nuestra tecnología de
+                        geolocalización avanzada.
+                    </p>
+                    <div class="feature-stats-compact">
+                        <div class="feature-stat">
+                            <span class="stat-value">+50%</span>
+                            <span class="stat-text">más rápido</span>
+                        </div>
+                        <div class="feature-stat">
+                            <span class="stat-value">24/7</span>
+                            <span class="stat-text">disponible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reserva Instantánea -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="feature-title-large">Reserva Instantánea</h3>
+                    </div>
+                    <div class="feature-image-compact">
+                        <img th:src="@{/images/reservas.png}" alt="Reserva Rápida" class="img-fluid">
+                    </div>
+                    <p class="feature-description-large">
+                        Garantiza tu espacio con reservas instantáneas. Programa tu llegada y evita la incertidumbre.
+                    </p>
+                    <div class="feature-stats-compact">
+                        <div class="feature-stat">
+                            <span class="stat-value">0%</span>
+                            <span class="stat-text">de estrés</span>
+                        </div>
+                        <div class="feature-stat">
+                            <span class="stat-value">1 min</span>
+                            <span class="stat-text">reserva</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pago Seguro -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title-large">Pago Seguro</h3>
+                    </div>
+                    <div class="feature-image-compact">
+                        <img th:src="@{/images/pagosseguros.png}" alt="Pago Seguro" class="img-fluid">
+                    </div>
+                    <p class="feature-description-large">
+                        Transacciones 100% seguras con encriptación de última generación. Paga sin contacto.
+                    </p>
+                    <div class="feature-stats-compact">
+                        <div class="feature-stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-text">protegido</span>
+                        </div>
+                        <div class="feature-stat">
+                            <span class="stat-value">SSL</span>
+                            <span class="stat-text">certificado</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Beneficios con Imágenes Grandes -->
+    <section class="benefits-large-section">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title-large">Beneficios que Transforman tu Experiencia</h2>
+                    <p class="section-subtitle-large">Descubre cómo Parkea Ya revoluciona la forma de estacionar</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-large-card">
+                        <div class="benefit-large-image">
+                            <img th:src="@{/images/ahoorro.jpg}" alt="Ahorro de Tiempo" class="img-fluid">
+                        </div>
+                        <div class="benefit-large-content">
+                            <h3 class="benefit-title">Ahorra Tiempo</h3>
+                            <p class="benefit-text">Encuentra estacionamiento en segundos con nuestra tecnología
+                                inteligente</p>
+                            <div class="benefit-highlight">
+                                <span class="highlight-text">+50% más eficiente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-large-card">
+                        <div class="benefit-large-image">
+                            <img th:src="@{/images/rapides.png}" alt="Ahorro de Dinero" class="img-fluid">
+                        </div>
+                        <div class="benefit-large-content">
+                            <h3 class="benefit-title">Ahorra Dinero</h3>
+                            <p class="benefit-text">Compara precios y encuentra las mejores tarifas en tu zona</p>
+                            <div class="benefit-highlight">
+                                <span class="highlight-text">Hasta 40% de ahorro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-large-card">
+                        <div class="benefit-large-image">
+                            <img th:src="@{/images/estacionamiento seguros .png}" alt="Estacionamientos Verificados"
+                                class="img-fluid">
+                        </div>
+                        <div class="benefit-large-content">
+                            <h3 class="benefit-title">Estacionamientos Verificados</h3>
+                            <p class="benefit-text">Espacios seguros y confiables con verificación completa</p>
+                            <div class="benefit-highlight">
+                                <span class="highlight-text">500+ disponibles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de App con Mockup Grande -->
+    <section class="app-showcase-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="app-content">
+                        <h2 class="app-title">Descarga la App Parkea Ya</h2>
+                        <p class="app-description">
+                            Transforma tu experiencia de estacionamiento con nuestra aplicación móvil.
+                            Encuentra, reserva y paga estacionamientos de forma rápida y segura.
+                        </p>
+
+                        <div class="app-features-list">
+                            <div class="app-feature">
+                                <i class="fas fa-check-circle feature-check"></i>
+                                <span>Búsqueda en tiempo real</span>
+                            </div>
+                            <div class="app-feature">
+                                <i class="fas fa-check-circle feature-check"></i>
+                                <span>Reservas instantáneas</span>
+                            </div>
+                            <div class="app-feature">
+                                <i class="fas fa-check-circle feature-check"></i>
+                                <span>Pagos seguros</span>
+                            </div>
+                            <div class="app-feature">
+                                <i class="fas fa-check-circle feature-check"></i>
+                                <span>Navegación integrada</span>
+                            </div>
+                        </div>
+
+                        <div class="download-buttons-large">
+                            <a href="#" class="btn btn-dark btn-download">
+                                <i class="fab fa-google-play me-2"></i>
+                                Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="app-mockup-large">
+                        <img th:src="@{/images/parkeayalogo.png}" alt="App Parkea Ya" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Final CTA -->
+    <section class="final-cta-large">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="cta-title-large">Comienza Hoy Mismo</h2>
+                    <p class="cta-description-large">
+                        Únete a la revolución del estacionamiento inteligente. Ya seas conductor o gestor de
+                        estacionamientos, tenemos la solución perfecta para optimizar tu experiencia de movilidad.
+                    </p>
+                    <div class="cta-actions-large">
+                        <a th:href="@{/solicitar-acceso}" class="btn btn-primary btn-cta-large me-3">
+                            <i class="fas fa-building me-2"></i>Registrar Estacionamiento
+                        </a>
+                        <a th:href="@{/descargar-app}" class="btn btn-outline-light btn-cta-large">
+                            <i class="fas fa-download me-2"></i>Descargar App
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Iniciando carrusel...');
+
+            // --- LIMPIEZA AGRESIVA DE NODOS DE LOGS Y CONTROLES DUPLICADOS ---
+            const heroRoot = document.querySelector('.hero-section');
+            if (heroRoot) {
+                // 1) Eliminar elementos <pre>/<code> o con clases comunes de logs
+                heroRoot.querySelectorAll('pre, code, .console, .console-log, .server-log, .debug-output').forEach(el => el.remove());
+
+                // 2) Eliminar nodos que contengan texto de inicialización del servidor (por si se inyectaron)
+                heroRoot.querySelectorAll('*').forEach(el => {
+                    const txt = (el.textContent || '').trim();
+                    if (txt && /Initializing Servlet|DispatcherServlet|Completed initialization/i.test(txt)) {
+                        // si el elemento contiene únicamente ese texto, eliminarlo
+                        if (txt.length < 300 && (!el.querySelector('*') || el.childNodes.length === 1)) {
+                            el.remove();
+                        }
+                    }
+                });
+
+                // 3) Dedupe: mantener sólo el primer .carousel-controls dentro del hero
+                const ctrls = heroRoot.querySelectorAll('.carousel-controls');
+                if (ctrls.length > 1) {
+                    for (let i = 1; i < ctrls.length; i++) ctrls[i].remove();
+                }
+            }
+            // --- FIN LIMPIEZA ---
+
+            // Seleccionar elementos sólo dentro del control principal
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.querySelector('#hero-carousel-controls .carousel-prev');
+            const nextBtn = document.querySelector('#hero-carousel-controls .carousel-next');
+
+            if (slides.length === 0) {
+                console.error('No se encontraron slides');
+                return;
+            }
+
+            let currentSlide = 0;
+            let slideInterval;
+            const slideDuration = 5000; // 5 segundos
+
+            // Función para inicializar el carrusel
+            function initCarousel() {
+                // Mostrar primer slide
+                slides[0].classList.add('active');
+                startCarousel();
+            }
+
+            // Función para cambiar de slide
+            function goToSlide(n) {
+                // Remover clase active del slide actual
+                slides[currentSlide].classList.remove('active');
+
+                // Actualizar índice
+                currentSlide = (n + slides.length) % slides.length;
+
+                // Añadir clase active al nuevo slide
+                slides[currentSlide].classList.add('active');
+            }
+
+            // Función para siguiente slide
+            function nextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+
+            // Función para slide anterior
+            function prevSlide() {
+                goToSlide(currentSlide - 1);
+            }
+
+            // Iniciar carrusel automático
+            function startCarousel() {
+                stopCarousel(); // Limpiar intervalo existente
+                slideInterval = setInterval(nextSlide, slideDuration);
+            }
+
+            // Detener carrusel automático
+            function stopCarousel() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                }
+            }
+
+            // Event Listeners
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    stopCarousel();
+                    nextSlide();
+                    startCarousel();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    stopCarousel();
+                    prevSlide();
+                    startCarousel();
+                });
+            }
+
+            // Pausar carrusel al hacer hover
+            const heroSection = document.querySelector('.hero-section');
+            if (heroSection) {
+                heroSection.addEventListener('mouseenter', stopCarousel);
+                heroSection.addEventListener('mouseleave', startCarousel);
+            }
+
+            // Inicializar carrusel
+            initCarousel();
+
+            console.log('Carrusel iniciado correctamente');
+        });
+    </script>
+</body>
+
+</html>

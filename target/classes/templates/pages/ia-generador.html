@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="fragments/header :: head">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- Hero Section -->
+    <section class="ia-hero bg-gradient-primary text-white py-5" style="background: linear-gradient(135deg, #1a237e 0%, #283593 100%); margin-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Generador IA Parkea Ya</h1>
+                    <p class="lead">
+                        Utiliza nuestro asistente de inteligencia artificial para generar 
+                        contenido, análisis y predicciones sobre movilidad urbana.
+                    </p>
+                    <div class="hero-badges">
+                        <span class="badge bg-primary me-2">Gemini AI</span>
+                        <span class="badge bg-success me-2">Tiempo Real</span>
+                        <span class="badge bg-info me-2">Análisis Avanzado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main AI Generator -->
+    <section class="ai-generator py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-robot me-2"></i>
+                                Generador de Contenido IA
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Selector de Tema -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Selecciona un tema:</label>
+                                <select id="ai-topic-select" class="form-select">
+                                    <option value="">-- Elegir tema --</option>
+                                    <option value="vision">Visión de Movilidad Futura</option>
+                                    <option value="beneficios">Beneficios de Estacionamientos Inteligentes</option>
+                                    <option value="sostenibilidad">Sostenibilidad Urbana</option>
+                                    <option value="prediccion">Predicción de Demanda</option>
+                                    <option value="analisis">Análisis Ejecutivo</option>
+                                    <option value="personalizado">Tema Personalizado</option>
+                                </select>
+                            </div>
+
+                            <!-- Tema Personalizado -->
+                            <div class="mb-4" id="custom-topic-container" style="display: none;">
+                                <label class="form-label fw-bold">Escribe tu tema:</label>
+                                <input type="text" id="ai-custom-topic" class="form-control" 
+                                       placeholder="Ej: Impacto de la IA en la movilidad del 2030...">
+                            </div>
+
+                            <!-- Botón Generar -->
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg" onclick="generateAIContent()">
+                                    <i class="fas fa-bolt me-2"></i>
+                                    Generar con IA
+                                </button>
+                            </div>
+
+                            <!-- Loading -->
+                            <div id="ai-loading" class="text-center mt-4 d-none">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Cargando...</span>
+                                </div>
+                                <p class="mt-2 text-muted">La IA está generando tu contenido...</p>
+                            </div>
+
+                            <!-- Resultado -->
+                            <div id="ai-result" class="mt-4 d-none">
+                                <div class="alert alert-success">
+                                    <h5><i class="fas fa-check-circle me-2"></i>Contenido Generado</h5>
+                                </div>
+                                <div id="ai-content" class="ai-content p-3 bg-light rounded">
+                                    <!-- El contenido generado por IA aparecerá aquí -->
+                                </div>
+                                <div class="mt-3 text-end">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="copyAIContent()">
+                                        <i class="fas fa-copy me-1"></i>Copiar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Error -->
+                            <div id="ai-error" class="alert alert-danger mt-4 d-none">
+                                <h5><i class="fas fa-exclamation-triangle me-2"></i>Error</h5>
+                                <p id="ai-error-message"></p>
+                                <p class="mb-0">Se mostrará contenido de ejemplo mientras solucionamos el problema.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions py-5 bg-light">
+        <div class="container">
+            <h3 class="text-center mb-4">Generación Rápida</h3>
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <button class="btn btn-outline-primary w-100 h-100 py-3" onclick="quickGenerate('vision')">
+                        <i class="fas fa-eye me-2"></i>Visión Futuro
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-success w-100 h-100 py-3" onclick="quickGenerate('beneficios')">
+                        <i class="fas fa-star me-2"></i>Beneficios
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-info w-100 h-100 py-3" onclick="quickGenerate('sostenibilidad')">
+                        <i class="fas fa-leaf me-2"></i>Sostenibilidad
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-warning w-100 h-100 py-3" onclick="quickGenerate('prediccion')">
+                        <i class="fas fa-chart-line me-2"></i>Predicción
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features -->
+    <section class="ai-features py-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Capacidades de Nuestra IA</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-card card border-0 shadow h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                            <h4>Análisis Predictivo</h4>
+                            <p>
+                                Genera predicciones de demanda de estacionamiento basadas en 
+                                patrones históricos, eventos y condiciones climáticas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="feature-card card border-0 shadow h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                            <h4>Impacto Ambiental</h4>
+                            <p>
+                                Calcula y analiza el impacto positivo de los estacionamientos 
+                                inteligentes en la reducción de emisiones y sostenibilidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <!-- JavaScript para IA -->
+    <script>
+    // Mostrar/ocultar campo personalizado
+    document.getElementById('ai-topic-select').addEventListener('change', function() {
+        const customContainer = document.getElementById('custom-topic-container');
+        if (this.value === 'personalizado') {
+            customContainer.style.display = 'block';
+        } else {
+            customContainer.style.display = 'none';
+        }
+    });
+
+    function quickGenerate(tipo) {
+        const topicSelect = document.getElementById('ai-topic-select');
+        const customContainer = document.getElementById('custom-topic-container');
+        
+        topicSelect.value = tipo;
+        customContainer.style.display = 'none';
+        
+        generateAIContent();
+    }
+
+    function copyAIContent() {
+        const content = document.getElementById('ai-content').innerText;
+        navigator.clipboard.writeText(content).then(() => {
+            alert('Contenido copiado al portapapeles');
+        });
+    }
+
+    // Permitir Enter en campo personalizado
+    document.getElementById('ai-custom-topic')?.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            generateAIContent();
+        }
+    });
+    </script>
+
+    <!-- Cargar el JavaScript de IA -->
+    <script th:src="@{/js/ai-interactions.js}"></script>
+</body>
+</html>

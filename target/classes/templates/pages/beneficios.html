@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head th:replace="fragments/header :: head">
+</head>
+
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- Hero Section -->
+    <section class="beneficios-hero bg-gradient-info text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Beneficios de Parkea Ya</h1>
+                    <p class="lead">
+                        Para usuarios, negocios y ciudades. Descubre cómo nuestra plataforma
+                        y app móvil transforman la experiencia de estacionamiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Móvil Section -->
+    <section class="app-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">
+                        <i class="fas fa-mobile-alt text-primary me-3"></i>
+                        App Móvil para Usuarios
+                    </h2>
+                    <p class="lead mb-4">
+                        Los conductores usan nuestra app para encontrar estacionamiento al instante,
+                        reservar con anticipación y pagar de forma segura.
+                    </p>
+
+                    <div class="app-features">
+                        <div class="feature-item d-flex mb-3">
+                            <i class="fas fa-search-location text-success fa-2x me-3"></i>
+                            <div>
+                                <h5>Búsqueda Inteligente</h5>
+                                <p class="mb-0">Encuentra estacionamientos disponibles cerca de ti en tiempo real</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item d-flex mb-3">
+                            <i class="fas fa-calendar-check text-primary fa-2x me-3"></i>
+                            <div>
+                                <h5>Reservas Anticipadas</h5>
+                                <p class="mb-0">Reserva tu plaza con horas/días de anticipación</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item d-flex mb-3">
+                            <i class="fas fa-qrcode text-warning fa-2x me-3"></i>
+                            <div>
+                                <h5>Pago sin Contacto</h5>
+                                <p class="mb-0">Paga mediante QR, tarjeta o billetera digital</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item d-flex">
+                            <i class="fas fa-map-marked-alt text-info fa-2x me-3"></i>
+                            <div>
+                                <h5>Navegación Integrada</h5>
+                                <p class="mb-0">GPS integrado que te guía hasta tu plaza reservada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h6 class="text-muted mb-2">Descarga la app:</h6>
+                        <div class="app-badges">
+                            <a href="#" class="btn btn-dark me-2 mb-2">
+                                <i class="fab fa-google-play me-2"></i>Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section class="benefits-grid py-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Beneficios para Todos</h2>
+
+            <div class="row g-4">
+                <!-- Para Usuarios -->
+                <div class="col-md-4">
+                    <div class="benefit-category card border-0 shadow h-100">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h5 class="mb-0">
+                                <i class="fas fa-users me-2"></i>Para Conductores
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Ahorra tiempo:</strong> Encuentra estacionamiento rápido
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Reduce estrés:</strong> Sin dar vueltas buscando
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Pago fácil:</strong> Múltiples métodos de pago
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Reservas:</strong> Garantiza tu plaza
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Notificaciones:</strong> Alertas en tiempo real
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Para Negocios -->
+                <div class="col-md-4">
+                    <div class="benefit-category card border-0 shadow h-100">
+                        <div class="card-header bg-success text-white text-center">
+                            <h5 class="mb-0">
+                                <i class="fas fa-store me-2"></i>Para Negocios
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Ingresos extra:</strong> Monetiza espacios ociosos
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Más clientes:</strong> Atrae conductores cercanos
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Gestión fácil:</strong> Panel de control intuitivo
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Reportes:</strong> Análisis de uso y ingresos
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Promociones:</strong> Ofrece descuentos especiales
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Para Ciudades -->
+                <div class="col-md-4">
+                    <div class="benefit-category card border-0 shadow h-100">
+                        <div class="card-header bg-info text-white text-center">
+                            <h5 class="mb-0">
+                                <i class="fas fa-city me-2"></i>Para Ciudades
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Menos tráfico:</strong> Reduce congestión vehicular
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Menos contaminación:</strong> Disminuye emisiones CO₂
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Datos valiosos:</strong> Para planificación urbana
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Espacios optimizados:</strong> Mejor uso del suelo
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    <strong>Ciudad inteligente:</strong> Movilidad sostenible
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios de Usuarios App -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Lo que dicen nuestros usuarios</h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial card border-0 shadow h-100">
+                        <div class="card-body text-center">
+                            <div class="stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">
+                                "La app me salva todos los días. Encuentro estacionamiento cerca de mi trabajo en
+                                segundos. ¡Increíble!"
+                            </p>
+                            <div class="user-info">
+                                <strong>María González</strong>
+                                <small class="d-block text-muted">Usuario frecuente</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial card border-0 shadow h-100">
+                        <div class="card-body text-center">
+                            <div class="stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">
+                                "Como dueño de restaurante, Parkea Ya me trae más clientes. Los comensales encuentran
+                                estacionamiento fácil."
+                            </p>
+                            <div class="user-info">
+                                <strong>Carlos Rodríguez</strong>
+                                <small class="d-block text-muted">Propietario de negocio</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial card border-0 shadow h-100">
+                        <div class="card-body text-center">
+                            <div class="stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">
+                                "Las reservas anticipadas son un game-changer. Sé que tendré estacionamiento cuando
+                                llegue al centro."
+                            </p>
+                            <div class="user-info">
+                                <strong>Ana Martínez</strong>
+                                <small class="d-block text-muted">Usuario premium</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-4">
+                <p class="lead mb-4">
+                    Descarga la app como usuario o solicita acceso al panel como negocio/administrador.
+                </p>
+                <div class="cta-buttons">
+                    <a th:href="@{/solicitar-acceso}" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>Solicitar Acceso Panel
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-mobile-alt me-2"></i>Descargar App
+                    </a>
+                </div>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+</body>
+
+</html>

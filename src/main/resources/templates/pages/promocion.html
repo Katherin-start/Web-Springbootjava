@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="fragments/header :: head">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- Hero Banner -->
+    <div th:replace="fragments/hero-banner :: hero-banner"></div>
+
+    <!-- Main Content -->
+    <section class="promocion-content py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Form Section -->
+                    <div th:replace="fragments/form-solicitud :: form-solicitud"></div>
+                    
+                    <!-- Benefits Summary -->
+                    <div class="benefits-summary mt-5">
+                        <h3 class="text-center mb-4">¿Qué incluye el acceso al panel?</h3>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="benefit-item d-flex">
+                                    <i class="fas fa-tachometer-alt text-primary fa-2x me-3"></i>
+                                    <div>
+                                        <h5>Dashboard Completo</h5>
+                                        <p class="text-muted mb-0">
+                                            Métricas en tiempo real de ocupación, ingresos y rendimiento
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="benefit-item d-flex">
+                                    <i class="fas fa-robot text-success fa-2x me-3"></i>
+                                    <div>
+                                        <h5>Predicciones IA</h5>
+                                        <p class="text-muted mb-0">
+                                            Análisis predictivo de demanda y recomendaciones inteligentes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="benefit-item d-flex">
+                                    <i class="fas fa-chart-bar text-info fa-2x me-3"></i>
+                                    <div>
+                                        <h5>Reportes Avanzados</h5>
+                                        <p class="text-muted mb-0">
+                                            Reportes detallados de uso, ingresos y comportamiento de usuarios
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="benefit-item d-flex">
+                                    <i class="fas fa-cogs text-warning fa-2x me-3"></i>
+                                    <div>
+                                        <h5>Gestión Centralizada</h5>
+                                        <p class="text-muted mb-0">
+                                            Control total de estacionamientos, tarifas y disponibilidad
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Lo que dicen nuestros partners</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial card border-0 shadow h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="testimonial-avatar mb-3">
+                                <i class="fas fa-user-circle fa-3x text-primary"></i>
+                            </div>
+                            <p class="card-text">
+                                "El panel de Parkea Ya nos permitió aumentar nuestros ingresos en un 40% 
+                                mediante la optimización de tarifas y la gestión inteligente de espacios."
+                            </p>
+                            <div class="user-info">
+                                <strong>Roberto Silva</strong>
+                                <small class="d-block text-muted">Gerente - Estacionamientos Central</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial card border-0 shadow h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="testimonial-avatar mb-3">
+                                <i class="fas fa-user-circle fa-3x text-success"></i>
+                            </div>
+                            <p class="card-text">
+                                "La integración con nuestra app fue perfecta. Nuestros usuarios ahora 
+                                encuentran estacionamiento en segundos y la satisfacción aumentó notablemente."
+                            </p>
+                            <div class="user-info">
+                                <strong>Laura Mendoza</strong>
+                                <small class="d-block text-muted">CTO - Mobility Solutions</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial card border-0 shadow h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="testimonial-avatar mb-3">
+                                <i class="fas fa-user-circle fa-3x text-info"></i>
+                            </div>
+                            <p class="card-text">
+                                "Las predicciones de IA nos ayudan a anticipar la demanda y optimizar 
+                                nuestros recursos. Una herramienta indispensable para cualquier estacionamiento moderno."
+                            </p>
+                            <div class="user-info">
+                                <strong>Carlos Ramírez</strong>
+                                <small class="d-block text-muted">Director - Parking Urban</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-4">¿Listo para transformar tu gestión de estacionamientos?</h2>
+            <p class="lead mb-4">
+                Completa el formulario y únete a cientos de organizaciones que ya usan Parkea Ya.
+            </p>
+            <a href="#solicitudForm" class="btn btn-light btn-lg">
+                <i class="fas fa-arrow-down me-2"></i>Completar Solicitud
+            </a>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

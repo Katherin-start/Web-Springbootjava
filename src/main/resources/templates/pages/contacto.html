@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="fragments/header :: head">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero bg-gradient-info text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Contáctanos</h1>
+                    <p class="lead">
+                        ¿Tienes preguntas sobre Parkea Ya? Estamos aquí para ayudarte. 
+                        Contáctanos y te responderemos a la brevedad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-card card border-0 shadow text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-comments fa-3x text-primary mb-3"></i>
+                            <h4>Soporte General</h4>
+                            <p class="text-muted mb-3">
+                                Para consultas generales sobre la plataforma y sus funcionalidades.
+                            </p>
+                            <div class="contact-info">
+                                <p class="mb-1">
+                                    <i class="fas fa-envelope me-2 text-primary"></i>
+                                    soporte@parkeaya.com
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-phone me-2 text-primary"></i>
+                                    +51 987 654 321
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="contact-card card border-0 shadow text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-rocket fa-3x text-success mb-3"></i>
+                            <h4>Acceso al Panel</h4>
+                            <p class="text-muted mb-3">
+                                Para solicitar acceso al panel de administración y gestión.
+                            </p>
+                            <div class="contact-info">
+                                <p class="mb-1">
+                                    <i class="fas fa-user-plus me-2 text-success"></i>
+                                    <a th:href="@{/solicitar-acceso}" class="text-decoration-none">
+                                        Solicitar acceso online
+                                    </a>
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-envelope me-2 text-success"></i>
+                                    admin@parkeaya.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="contact-card card border-0 shadow text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-mobile-alt fa-3x text-warning mb-3"></i>
+                            <h4>App Móvil</h4>
+                            <p class="text-muted mb-3">
+                                Soporte técnico para usuarios de la aplicación móvil.
+                            </p>
+                            <div class="contact-info">
+                                <p class="mb-1">
+                                    <i class="fab fa-google-play me-2 text-warning"></i>
+                                    Google Play Store
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fab fa-app-store me-2 text-warning"></i>
+                                    Apple App Store
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-paper-plane me-2"></i>Envíanos un Mensaje
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactName" class="form-label">Nombre Completo *</label>
+                                        <input type="text" class="form-control" id="contactName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactEmail" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="contactEmail" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="contactSubject" class="form-label">Asunto *</label>
+                                    <select class="form-select" id="contactSubject" required>
+                                        <option value="">Selecciona un asunto</option>
+                                        <option value="soporte">Soporte Técnico</option>
+                                        <option value="panel">Acceso al Panel</option>
+                                        <option value="app">App Móvil</option>
+                                        <option value="empresa">Partnership Empresarial</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label">Mensaje *</label>
+                                    <textarea class="form-control" id="contactMessage" rows="5" required 
+                                              placeholder="Describe tu consulta o solicitud..."></textarea>
+                                </div>
+                                
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="contactPrivacy" required>
+                                    <label class="form-check-label" for="contactPrivacy">
+                                        Acepto la política de privacidad y el tratamiento de mis datos
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Preguntas Frecuentes</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                        data-bs-target="#faq1" aria-expanded="true">
+                                    ¿Cómo funciona la app móvil de Parkea Ya?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    La app permite a los usuarios encontrar estacionamientos disponibles en tiempo real, 
+                                    realizar reservas anticipadas, pagar de forma segura y recibir navegación hasta el 
+                                    lugar. Todo desde su smartphone.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                        data-bs-target="#faq2" aria-expanded="false">
+                                    ¿Qué necesito para solicitar acceso al panel?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Solo necesitas completar el formulario de solicitud con tu información básica. 
+                                    Nuestro equipo revisará tu solicitud y te contactará en un plazo máximo de 48 horas 
+                                    para coordinar el acceso y capacitación.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                        data-bs-target="#faq3" aria-expanded="false">
+                                    ¿Es gratuito el uso de la plataforma?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    La app para usuarios es completamente gratuita. Para el panel de administración, 
+                                    ofrecemos diferentes planes según las necesidades de cada organización. Contáctanos 
+                                    para más información sobre nuestros planes y precios.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
