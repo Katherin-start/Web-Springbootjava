@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+    <head th:replace="fragments/header :: head">
+    </head>
+
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+
+        <!-- HERO SECTION CON GRADIENTE VIBRANTE Y STATS -->
+        <section class="hero-beneficios" style="background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1e88e5 100%);
+                 position: relative; overflow: hidden; padding: 120px 0 80px; margin-top: 80px;">
+            <!-- Elementos decorativos animados -->
+            <div style="position: absolute; top: -50px; right: -100px; width: 400px; height: 400px;
+                 background: rgba(41, 121, 255, 0.15); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+            <div style="position: absolute; bottom: -80px; left: -150px; width: 350px; height: 350px;
+                 background: rgba(0, 188, 212, 0.1); border-radius: 50%; animation: float 8s ease-in-out infinite reverse;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: white;
+                            line-height: 1.2; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                            Beneficios que <span style="background: linear-gradient(135deg, #ffff00, #00ff88);
+                                                 -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                                                 background-clip: text;">Transforman</span> tu Movilidad
+                        </h1>
+                        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.95); margin-bottom: 2rem;
+                           line-height: 1.7; max-width: 600px;">
+                            Para conductores, negocios y ciudades. Descubre cómo nuestra plataforma revoluciona 
+                            la experiencia de estacionamiento con tecnología IA de última generación.
+                        </p>
+
+                        <!-- Badges animados -->
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+                                  color: white; padding: 0.75rem 1.5rem; border-radius: 50px;
+                                  border: 1px solid rgba(255,255,255,0.3); font-weight: 600;
+                                  font-size: 0.95rem; animation: pulse 2s infinite;">
+                                <i class="fas fa-bolt me-2"></i>Tiempo Real
+                            </span>
+                            <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+                                  color: white; padding: 0.75rem 1.5rem; border-radius: 50px;
+                                  border: 1px solid rgba(255,255,255,0.3); font-weight: 600;
+                                  font-size: 0.95rem;">
+                                <i class="fas fa-chart-line me-2"></i>Datos Inteligentes
+                            </span>
+                            <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+                                  color: white; padding: 0.75rem 1.5rem; border-radius: 50px;
+                                  border: 1px solid rgba(255,255,255,0.3); font-weight: 600;
+                                  font-size: 0.95rem;">
+                                <i class="fas fa-leaf me-2"></i>Sostenible
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards Grandes -->
+                    <div class="col-lg-4">
+                        <div style="display: grid; gap: 1.5rem;">
+                            <!-- Stat 1 -->
+                            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px);
+                                 padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);
+                                 text-align: center; transition: all 0.3s ease; animation: slideUp 0.6s ease-out;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #ffff00; margin-bottom: 0.5rem;">
+                                    +50%
+                                </div>
+                                <div style="font-size: 0.95rem; color: rgba(255,255,255,0.9); text-transform: uppercase;
+                                     letter-spacing: 0.1em; font-weight: 600;">
+                                    Eficiencia
+                                </div>
+                            </div>
+
+                            <!-- Stat 2 -->
+                            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px);
+                                 padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);
+                                 text-align: center; transition: all 0.3s ease; animation: slideUp 0.6s ease-out 0.1s both;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #00ff88; margin-bottom: 0.5rem;">
+                                    -35%
+                                </div>
+                                <div style="font-size: 0.95rem; color: rgba(255,255,255,0.9); text-transform: uppercase;
+                                     letter-spacing: 0.1em; font-weight: 600;">
+                                    CO₂ Reducido
+                                </div>
+                            </div>
+
+                            <!-- Stat 3 -->
+                            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px);
+                                 padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);
+                                 text-align: center; transition: all 0.3s ease; animation: slideUp 0.6s ease-out 0.2s both;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #00bcd4; margin-bottom: 0.5rem;">
+                                    24/7
+                                </div>
+                                <div style="font-size: 0.95rem; color: rgba(255,255,255,0.9); text-transform: uppercase;
+                                     letter-spacing: 0.1em; font-weight: 600;">
+                                    Disponible
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-30px);
+                    }
+                }
+                @keyframes slideUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                @keyframes pulse {
+                    0%, 100% {
+                        box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(255,255,255,0);
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- SECCIÓN APP MÓVIL PREMIUM -->
+        <section style="padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Content Left -->
+                    <div class="col-lg-6">
+                        <div style="margin-bottom: 2rem;">
+                            <span style="display: inline-block; background: rgba(41, 121, 255, 0.15);
+                                  color: #2979ff; padding: 0.75rem 1.5rem; border-radius: 50px;
+                                  font-weight: 700; font-size: 0.95rem;">
+                                📱 APP MÓVIL
+                            </span>
+                        </div>
+
+                        <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: #1a237e;
+                            margin-bottom: 1.5rem; line-height: 1.3;">
+                            Encuentra Estacionamiento en <span style="color: #2979ff;">Segundos</span>
+                        </h2>
+
+                        <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.8;
+                           max-width: 550px;">
+                            Los conductores usan nuestra app para encontrar estacionamiento al instante, reservar 
+                            con anticipación y pagar de forma segura. Disponible 24/7 en iOS y Android.
+                        </p>
+
+                        <!-- Features Grid -->
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                            <!-- Feature 1 -->
+                            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: white;
+                                 border-radius: 12px; border-left: 4px solid #2979ff;
+                                 box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;"
+                                 onmouseover="this.style.transform = 'translateX(10px)'; this.style.boxShadow = '0 8px 20px rgba(41, 121, 255, 0.15)'"
+                                 onmouseout="this.style.transform = 'translateX(0)'; this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)'">
+                                <div style="font-size: 2rem; color: #2979ff; flex-shrink: 0;">
+                                    <i class="fas fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h5 style="color: #1a237e; font-weight: 700; margin-bottom: 0.25rem;">
+                                        Búsqueda en Tiempo Real
+                                    </h5>
+                                    <p style="color: #999; margin: 0; font-size: 0.95rem;">
+                                        Localiza disponibilidad cercana instantáneamente
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: white;
+                                 border-radius: 12px; border-left: 4px solid #00bcd4;
+                                 box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;"
+                                 onmouseover="this.style.transform = 'translateX(10px)'; this.style.boxShadow = '0 8px 20px rgba(0, 188, 212, 0.15)'"
+                                 onmouseout="this.style.transform = 'translateX(0)'; this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)'">
+                                <div style="font-size: 2rem; color: #00bcd4; flex-shrink: 0;">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <h5 style="color: #1a237e; font-weight: 700; margin-bottom: 0.25rem;">
+                                        Reservas Garantizadas
+                                    </h5>
+                                    <p style="color: #999; margin: 0; font-size: 0.95rem;">
+                                        Reserva tu plaza con horas o días de anticipación
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: white;
+                                 border-radius: 12px; border-left: 4px solid #00e676;
+                                 box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;"
+                                 onmouseover="this.style.transform = 'translateX(10px)'; this.style.boxShadow = '0 8px 20px rgba(0, 230, 118, 0.15)'"
+                                 onmouseout="this.style.transform = 'translateX(0)'; this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)'">
+                                <div style="font-size: 2rem; color: #00e676; flex-shrink: 0;">
+                                    <i class="fas fa-mobile-screen-button"></i>
+                                </div>
+                                <div>
+                                    <h5 style="color: #1a237e; font-weight: 700; margin-bottom: 0.25rem;">
+                                        Pago sin Contacto
+                                    </h5>
+                                    <p style="color: #999; margin: 0; font-size: 0.95rem;">
+                                        Paga con QR, tarjeta o billetera digital segura
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: white;
+                                 border-radius: 12px; border-left: 4px solid #ff9800;
+                                 box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;"
+                                 onmouseover="this.style.transform = 'translateX(10px)'; this.style.boxShadow = '0 8px 20px rgba(255, 152, 0, 0.15)'"
+                                 onmouseout="this.style.transform = 'translateX(0)'; this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)'">
+                                <div style="font-size: 2rem; color: #ff9800; flex-shrink: 0;">
+                                    <i class="fas fa-road"></i>
+                                </div>
+                                <div>
+                                    <h5 style="color: #1a237e; font-weight: 700; margin-bottom: 0.25rem;">
+                                        GPS Integrado
+                                    </h5>
+                                    <p style="color: #999; margin: 0; font-size: 0.95rem;">
+                                        Navegación hasta tu plaza reservada
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Download Buttons -->
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="#" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                               background: #1a237e; color: white; padding: 1rem 1.75rem;
+                               border-radius: 10px; text-decoration: none; font-weight: 700;
+                               transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(26,35,126,0.3);
+                               border: none;">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                            <a href="#" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                               background: white; color: #1a237e; padding: 1rem 1.75rem;
+                               border-radius: 10px; text-decoration: none; font-weight: 700;
+                               transition: all 0.3s ease; border: 2px solid #1a237e;">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mockup Right -->
+                    <div class="col-lg-6" style="text-align: center;">
+                        <div style="position: relative; display: inline-block; perspective: 1000px;">
+                            <div style="position: relative; width: 280px; height: 560px; margin: 0 auto;
+                                 background: linear-gradient(135deg, #2979ff, #00bcd4); border-radius: 40px;
+                                 padding: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.3),
+                                 -20px 30px 80px rgba(41, 121, 255, 0.3);
+                                 animation: float 4s ease-in-out infinite;">
+                                <div style="width: 100%; height: 100%; background: white; border-radius: 35px;
+                                     overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                    <img src="https://via.placeholder.com/256x544/1a237e/2979ff?text=Parkea+Ya+App" 
+                                         alt="App Mockup" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+
+                            <!-- Glow effect -->
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                                 width: 100%; height: 100%; background: radial-gradient(circle, rgba(41, 121, 255, 0.3), transparent);
+                                 border-radius: 40px; filter: blur(30px); pointer-events: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRID DE BENEFICIOS TRIPLE (3 CATEGORÍAS) -->
+        <section style="padding: 100px 0; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #1a237e;
+                        margin-bottom: 1rem;">
+                        Beneficios para <span style="color: #2979ff;">Todos</span>
+                    </h2>
+                    <p style="font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.7;">
+                        Conductores, negocios y ciudades. Cada uno gana con Parkea Ya.
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
+                    <!-- BENEFICIO 1: CONDUCTORES -->
+                    <div style="background: linear-gradient(135deg, rgba(41, 121, 255, 0.1), rgba(0, 188, 212, 0.1));
+                         border: 2px solid #2979ff; border-radius: 25px; padding: 2.5rem;
+                         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                         position: relative; overflow: hidden; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-15px)'; this.style.boxShadow = '0 25px 50px rgba(41, 121, 255, 0.3)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)'">
+
+                        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px;
+                             background: rgba(41, 121, 255, 0.1); border-radius: 50%;"></div>
+
+                        <div style="position: relative; z-index: 2;">
+                            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #2979ff;">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+
+                            <h3 style="font-size: 1.6rem; font-weight: 800; color: #1a237e; margin-bottom: 1rem;">
+                                Para Conductores
+                            </h3>
+
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Ahorra tiempo:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Encuentra estacionamiento en segundos
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Reduce estrés:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Sin dar vueltas buscando plaza
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Pago fácil:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Múltiples métodos seguros
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Ahorra dinero:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Compara precios automáticamente
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(41, 121, 255, 0.2);">
+                                <div style="font-size: 2.2rem; font-weight: 900; color: #2979ff;">+50%</div>
+                                <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
+                                    Eficiencia en búsqueda
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BENEFICIO 2: NEGOCIOS -->
+                    <div style="background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(76, 175, 80, 0.1));
+                         border: 2px solid #00e676; border-radius: 25px; padding: 2.5rem;
+                         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                         position: relative; overflow: hidden; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-15px)'; this.style.boxShadow = '0 25px 50px rgba(0, 230, 118, 0.3)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)'">
+
+                        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px;
+                             background: rgba(0, 230, 118, 0.1); border-radius: 50%;"></div>
+
+                        <div style="position: relative; z-index: 2;">
+                            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #00e676;">
+                                <i class="fas fa-store"></i>
+                            </div>
+
+                            <h3 style="font-size: 1.6rem; font-weight: 800; color: #1a237e; margin-bottom: 1rem;">
+                                Para Negocios
+                            </h3>
+
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #2979ff; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Ingresos extra:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Monetiza espacios ociosos
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #2979ff; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Más clientes:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Atrae conductores cercanos
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #2979ff; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Gestión fácil:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Panel de control intuitivo
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: #2979ff; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Reportes IA:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Análisis predictivo de demanda
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(0, 230, 118, 0.2);">
+                                <div style="font-size: 2.2rem; font-weight: 900; color: #00e676;">+40%</div>
+                                <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
+                                    Aumento de ingresos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BENEFICIO 3: CIUDADES -->
+                    <div style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(33, 150, 243, 0.1));
+                         border: 2px solid #00bcd4; border-radius: 25px; padding: 2.5rem;
+                         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                         position: relative; overflow: hidden; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-15px)'; this.style.boxShadow = '0 25px 50px rgba(0, 188, 212, 0.3)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)'">
+
+                        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px;
+                             background: rgba(0, 188, 212, 0.1); border-radius: 50%;"></div>
+
+                        <div style="position: relative; z-index: 2;">
+                            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #00bcd4;">
+                                <i class="fas fa-city"></i>
+                            </div>
+
+                            <h3 style="font-size: 1.6rem; font-weight: 800; color: #1a237e; margin-bottom: 1rem;">
+                                Para Ciudades
+                            </h3>
+
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Menos tráfico:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Reduce congestión vehicular
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Menos contaminación:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Disminuye emisiones CO₂
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Datos valiosos:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Para planificación urbana inteligente
+                                        </p>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: #00e676; font-weight: 900; flex-shrink: 0; font-size: 1.3rem;">✓</span>
+                                    <div>
+                                        <strong style="color: #1a237e;">Ciudad inteligente:</strong>
+                                        <p style="color: #666; margin: 0.25rem 0 0 0; font-size: 0.95rem;">
+                                            Movilidad urbana sostenible
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(0, 188, 212, 0.2);">
+                                <div style="font-size: 2.2rem; font-weight: 900; color: #00bcd4;">-30%</div>
+                                <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
+                                    Tráfico Reducido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS PREMIUM -->
+        <section style="padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: #1a237e;
+                        margin-bottom: 1rem;">
+                        Lo que Dicen Nuestros <span style="color: #2979ff;">Usuarios</span>
+                    </h2>
+                    <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
+                        Historias reales de cómo Parkea Ya cambió la vida de conductores y negocios
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <!-- Testimonial 1 -->
+                    <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                         border-top: 4px solid #2979ff; transition: all 0.3s ease;"
+                         onmouseover="this.style.transform = 'translateY(-8px)';
+                             this.style.boxShadow = '0 15px 40px rgba(41, 121, 255, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)'">
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                        </div>
+                        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem; line-height: 1.7;">
+                            "La app me cambió la vida. Ya no pierdo 30 minutos buscando estacionamiento. 
+                            Es increíble, realmente funciona. 10/10 recomendado."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #2979ff, #00bcd4);
+                                 border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                MG
+                            </div>
+                            <div>
+                                <strong style="color: #1a237e; display: block;">María González</strong>
+                                <small style="color: #999;">Usuario Frecuente, CDMX</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                         border-top: 4px solid #00e676; transition: all 0.3s ease;"
+                         onmouseover="this.style.transform = 'translateY(-8px)';
+                             this.style.boxShadow = '0 15px 40px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)'">
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                        </div>
+                        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem; line-height: 1.7;">
+                            "Como dueño de restaurante, Parkea Ya fue lo mejor que pasó. Mis clientes encuentran 
+                            estacionamiento fácil y los ingresos subieron un 40%. Excelente."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00e676, #4caf50);
+                                 border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                CR
+                            </div>
+                            <div>
+                                <strong style="color: #1a237e; display: block;">Carlos Rodríguez</strong>
+                                <small style="color: #999;">Gerente Restaurante, Lima</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                         border-top: 4px solid #00bcd4; transition: all 0.3s ease;"
+                         onmouseover="this.style.transform = 'translateY(-8px)';
+                             this.style.boxShadow = '0 15px 40px rgba(0, 188, 212, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)'">
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                            <i class="fas fa-star" style="color: #ffc107; font-size: 1.1rem;"></i>
+                        </div>
+                        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem; line-height: 1.7;">
+                            "Las predicciones de IA realmente funcionan. Sé exactamente dónde hay disponibilidad 
+                            antes de salir de casa. Revolucionario."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00bcd4, #0097a7);
+                                 border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+                                AM
+                            </div>
+                            <div>
+                                <strong style="color: #1a237e; display: block;">Ana Martínez</strong>
+                                <small style="color: #999;">Usuario Premium, Guadalajara</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL ÉPICO -->
+        <section style="background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1e88e5 100%);
+                 padding: 100px 0; position: relative; overflow: hidden; color: white;">
+
+            <!-- Decorativos -->
+            <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px;
+                 background: rgba(255,255,255,0.1); border-radius: 50%; animation: float 6s infinite;"></div>
+            <div style="position: absolute; bottom: -50px; left: -80px; width: 250px; height: 250px;
+                 background: rgba(0, 230, 118, 0.1); border-radius: 50%;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 1.5rem;">
+                        ¿Listo para Transformar tu Movilidad?
+                    </h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; line-height: 1.7;">
+                        Únete a miles de conductores y negocios que ya disfrutan de Parkea Ya.
+                        Comienza hoy y experimenta la diferencia.
+                    </p>
+
+                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+                        <a th:href="@{/solicitar-acceso}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: white; color: #1a237e; padding: 1.2rem 2.5rem;
+                           border-radius: 12px; text-decoration: none; font-weight: 700;
+                           font-size: 1.05rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                           transition: all 0.3s ease; border: none;">
+                            <i class="fas fa-rocket me-1"></i> Solicitar Acceso
+                        </a>
+                        <a th:href="@{/ia-generador}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: rgba(255,255,255,0.2); color: white;
+                           padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none;
+                           font-weight: 700; font-size: 1.05rem;
+                           border: 2px solid rgba(255,255,255,0.3);
+                           transition: all 0.3s ease; backdrop-filter: blur(10px);">
+                            <i class="fas fa-robot me-1"></i> Explorar con IA
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <small style="opacity: 0.8;">
+                            <i class="fas fa-shield-alt me-1"></i>
+                            Datos 100% protegidos • Soporte 24/7 • Sin compromiso
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div th:replace="fragments/footer :: footer"></div>

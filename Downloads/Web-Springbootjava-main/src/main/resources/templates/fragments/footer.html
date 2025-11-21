@@ -1,0 +1,63 @@
+<!-- Footer -->
+<footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="mb-3">
+                    <i class="fas fa-parking me-2"></i>Parkea Ya
+                </h5>
+                <p class="text-light">Sistema inteligente de estacionamiento que transforma la movilidad urbana mediante
+                    IA y tecnología avanzada.</p>
+                <div class="social-links">
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2 mb-4">
+                <h6 class="mb-3">Enlaces</h6>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/}" class="text-light text-decoration-none">Inicio</a></li>
+                    <li><a th:href="@{/beneficios}" class="text-light text-decoration-none">Beneficios</a></li>
+                    <li><a th:href="@{/futuro-movilidad}" class="text-light text-decoration-none">Futuro</a></li>
+                    <li><a th:href="@{/ia-generador}" class="text-light text-decoration-none">IA</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h6 class="mb-3">Soporte</h6>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/contacto}" class="text-light text-decoration-none">Contacto</a></li>
+                    <li><a th:href="@{/solicitar-acceso}" class="text-light text-decoration-none">Solicitar Acceso</a>
+                    </li>
+                    <li><a href="#" class="text-light text-decoration-none">Política de Privacidad</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Términos de Servicio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="bg-light">
+
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Parkea Ya. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">
+                    <i class="fas fa-heart text-danger"></i>
+                    Hecho con pasión por la movilidad sostenible
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script th:src="@{/js/main.js}"></script>
+<script th:src="@{/js/ai-interactions.js}"></script>
+</body>
+
+</html>

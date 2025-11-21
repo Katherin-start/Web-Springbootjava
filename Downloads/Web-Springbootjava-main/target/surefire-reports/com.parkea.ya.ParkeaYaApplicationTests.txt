@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.parkea.ya.ParkeaYaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.37 s -- in com.parkea.ya.ParkeaYaApplicationTests

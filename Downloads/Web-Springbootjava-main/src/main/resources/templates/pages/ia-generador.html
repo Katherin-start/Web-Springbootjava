@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head th:replace="fragments/header :: head">
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+
+        <!-- HERO SECTION ÉPICO CON ANIMACIÓN -->
+        <section style="background: linear-gradient(135deg, #0d1b2a 0%, #1a237e 40%, #283593 70%, #1e88e5 100%);
+                 position: relative; overflow: hidden; padding: 140px 0 100px; margin-top: 80px;">
+
+            <!-- Elementos decorativos animados -->
+            <div style="position: absolute; top: -150px; right: -100px; width: 500px; height: 500px;
+                 background: rgba(0, 230, 118, 0.15); border-radius: 50%;
+                 animation: float 8s ease-in-out infinite;"></div>
+            <div style="position: absolute; bottom: -100px; left: -150px; width: 400px; height: 400px;
+                 background: rgba(0, 188, 212, 0.08); border-radius: 50%;
+                 animation: float 10s ease-in-out infinite reverse;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div style="margin-bottom: 1.5rem;">
+                            <span style="display: inline-block; background: rgba(255,255,255,0.2);
+                                  backdrop-filter: blur(10px); color: white; padding: 0.75rem 1.5rem;
+                                  border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+                                  border: 1px solid rgba(255,255,255,0.3); animation: pulse 2s infinite;">
+                                <i class="fas fa-sparkles me-2"></i>Inteligencia Artificial Avanzada
+                            </span>
+                        </div>
+
+                        <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; color: white;
+                            line-height: 1.15; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                            Generador de Contenido <span style="background: linear-gradient(135deg, #00ff88, #2979ff);
+                                                         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                                                         background-clip: text;">con IA</span>
+                        </h1>
+
+                        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.95); margin-bottom: 2rem;
+                           line-height: 1.8; max-width: 650px;">
+                            Utiliza la inteligencia artificial más avanzada para generar análisis, predicciones 
+                            y contenido sobre movilidad urbana. Explora visiones del futuro con solo un click.
+                        </p>
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-check-circle" style="color: #00ff88; font-size: 1.2rem;"></i>
+                                <span>Respuestas en segundos</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-check-circle" style="color: #00ff88; font-size: 1.2rem;"></i>
+                                <span>100% Personalizable</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-check-circle" style="color: #00ff88; font-size: 1.2rem;"></i>
+                                <span>Sin Límites</span>
+                            </div>
+                        </div>
+
+                        <a th:href="@{#generador-section}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: linear-gradient(135deg, #00ff88, #00e676);
+                           color: #0d1b2a; padding: 1.2rem 2.5rem; border-radius: 12px;
+                           text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                           box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
+                           transition: all 0.3s ease; border: none;">
+                            <i class="fas fa-arrow-down me-1"></i> Comienza Ahora
+                        </a>
+                    </div>
+
+                    <div class="col-lg-5" style="text-align: center;">
+                        <div style="position: relative; display: inline-block;">
+                            <div style="width: 100%; max-width: 350px; aspect-ratio: 1;
+                                 background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 188, 212, 0.2));
+                                 border-radius: 30px; border: 2px solid rgba(255,255,255,0.2);
+                                 display: flex; align-items: center; justify-content: center;
+                                 box-shadow: 0 25px 50px rgba(0,0,0,0.3), inset 0 0 60px rgba(0, 230, 118, 0.1);
+                                 animation: float 5s ease-in-out infinite;">
+                                <i class="fas fa-brain" style="font-size: 140px; color: rgba(255,255,255,0.3);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-30px);
+                    }
+                }
+                @keyframes pulse {
+                    0%, 100% {
+                        box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(255,255,255,0);
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- QUICK GENERATION BUTTONS -->
+        <section style="padding: 80px 0; background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #1a237e;
+                        margin-bottom: 0.5rem;">
+                        Generación <span style="color: #2979ff;">Rápida</span>
+                    </h2>
+                    <p style="font-size: 1.1rem; color: #666;">
+                        Elige un tema y obtén contenido generado al instante
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;
+                     max-width: 1000px; margin: 0 auto;">
+                    <!-- Quick Button 1 -->
+                    <button style="background: linear-gradient(135deg, rgba(41, 121, 255, 0.15), rgba(0, 188, 212, 0.1));
+                            border: 2px solid #2979ff; border-radius: 15px; padding: 1.5rem;
+                            color: #1a237e; font-weight: 700; font-size: 1rem; cursor: pointer;
+                            transition: all 0.3s ease; text-decoration: none;"
+                            onmouseover="this.style.transform = 'translateY(-8px)'; this.style.boxShadow = '0 15px 35px rgba(41, 121, 255, 0.3)'"
+                            onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'"
+                            onclick="quickGenerate('vision')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">👁️</div>
+                        <div>Visión Futuro</div>
+                    </button>
+
+                    <!-- Quick Button 2 -->
+                    <button style="background: linear-gradient(135deg, rgba(0, 230, 118, 0.15), rgba(76, 175, 80, 0.1));
+                            border: 2px solid #00e676; border-radius: 15px; padding: 1.5rem;
+                            color: #1a237e; font-weight: 700; font-size: 1rem; cursor: pointer;
+                            transition: all 0.3s ease; text-decoration: none;"
+                            onmouseover="this.style.transform = 'translateY(-8px)'; this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.3)'"
+                            onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'"
+                            onclick="quickGenerate('beneficios')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">⭐</div>
+                        <div>Beneficios IA</div>
+                    </button>
+
+                    <!-- Quick Button 3 -->
+                    <button style="background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(255, 193, 7, 0.1));
+                            border: 2px solid #ff9800; border-radius: 15px; padding: 1.5rem;
+                            color: #1a237e; font-weight: 700; font-size: 1rem; cursor: pointer;
+                            transition: all 0.3s ease; text-decoration: none;"
+                            onmouseover="this.style.transform = 'translateY(-8px)'; this.style.boxShadow = '0 15px 35px rgba(255, 152, 0, 0.3)'"
+                            onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'"
+                            onclick="quickGenerate('sostenibilidad')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🌱</div>
+                        <div>Sostenibilidad</div>
+                    </button>
+
+                    <!-- Quick Button 4 -->
+                    <button style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(33, 150, 243, 0.1));
+                            border: 2px solid #00bcd4; border-radius: 15px; padding: 1.5rem;
+                            color: #1a237e; font-weight: 700; font-size: 1rem; cursor: pointer;
+                            transition: all 0.3s ease; text-decoration: none;"
+                            onmouseover="this.style.transform = 'translateY(-8px)'; this.style.boxShadow = '0 15px 35px rgba(0, 188, 212, 0.3)'"
+                            onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'"
+                            onclick="quickGenerate('prediccion')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📊</div>
+                        <div>Predicción Datos</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN GENERATOR SECTION -->
+        <section id="generador-section" style="padding: 100px 0; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <!-- Generator Card -->
+                    <div style="background: white; border-radius: 25px; padding: 3rem;
+                         box-shadow: 0 20px 60px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.05);
+                         position: relative; overflow: hidden;">
+
+                        <!-- Decorative gradient -->
+                        <div style="position: absolute; top: 0; right: 0; width: 300px; height: 300px;
+                             background: linear-gradient(135deg, rgba(41, 121, 255, 0.1), transparent);
+                             border-radius: 50%; pointer-events: none;"></div>
+
+                        <div style="position: relative; z-index: 2;">
+                            <h2 style="font-size: 2.2rem; font-weight: 900; color: #1a237e;
+                                margin-bottom: 0.5rem; text-align: center;">
+                                Generador Avanzado
+                            </h2>
+                            <p style="color: #999; text-align: center; margin-bottom: 2.5rem; font-size: 1rem;">
+                                Selecciona un tema o escribe el tuyo personalizado
+                            </p>
+
+                            <!-- Form Group 1 -->
+                            <div style="margin-bottom: 2rem;">
+                                <label style="display: block; color: #1a237e; font-weight: 700;
+                                       margin-bottom: 1rem; font-size: 1rem;">
+                                    <i class="fas fa-list me-2" style="color: #2979ff;"></i>Selecciona un Tema
+                                </label>
+                                <select id="ai-topic-select" style="width: 100%; padding: 1rem 1.25rem;
+                                        border: 2px solid #e0e0e0; border-radius: 12px;
+                                        font-size: 1rem; color: #1a237e;
+                                        font-weight: 500; transition: all 0.3s ease;
+                                        background: white; cursor: pointer;"
+                                        onchange="updateCustomTopicVisibility()"
+                                        onfocus="this.style.borderColor = '#2979ff'; this.style.boxShadow = '0 0 0 3px rgba(41, 121, 255, 0.1)'"
+                                        onblur="this.style.borderColor = '#e0e0e0'; this.style.boxShadow = 'none'">
+                                    <option value="">-- Elegir tema --</option>
+                                    <option value="vision">Visión de Movilidad Futura</option>
+                                    <option value="beneficios">Beneficios de Estacionamientos Inteligentes</option>
+                                    <option value="sostenibilidad">Sostenibilidad Urbana</option>
+                                    <option value="prediccion">Predicción de Demanda</option>
+                                    <option value="analisis">Análisis Ejecutivo</option>
+                                    <option value="personalizado">📝 Tema Personalizado</option>
+                                </select>
+                            </div>
+
+                            <!-- Form Group 2 - Custom Topic -->
+                            <div id="custom-topic-container" style="display: none; margin-bottom: 2rem;">
+                                <label style="display: block; color: #1a237e; font-weight: 700;
+                                       margin-bottom: 1rem; font-size: 1rem;">
+                                    <i class="fas fa-pen me-2" style="color: #2979ff;"></i>Tu Tema Personalizado
+                                </label>
+                                <input type="text" id="ai-custom-topic" 
+                                       placeholder="Ej: Impacto de la IA en la movilidad del 2030..."
+                                       style="width: 100%; padding: 1rem 1.25rem; border: 2px solid #e0e0e0;
+                                       border-radius: 12px; font-size: 1rem; color: #1a237e;
+                                       transition: all 0.3s ease; font-family: inherit;"
+                                       onfocus="this.style.borderColor = '#2979ff'; this.style.boxShadow = '0 0 0 3px rgba(41, 121, 255, 0.1)'"
+                                       onblur="this.style.borderColor = '#e0e0e0';
+                                           this.style.boxShadow = 'none'"
+                                       onkeypress="if (event.key === 'Enter')
+                                               generateAIContent()">
+                            </div>
+
+                            <!-- Generate Button -->
+                            <button onclick="generateAIContent()" 
+                                    style="width: 100%; padding: 1.2rem; background: linear-gradient(135deg, #2979ff, #00bcd4);
+                                    color: white; border: none; border-radius: 12px; font-weight: 700;
+                                    font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease;
+                                    box-shadow: 0 10px 30px rgba(41, 121, 255, 0.3); margin-bottom: 2rem;">
+                                <i class="fas fa-bolt me-2"></i>Generar Contenido con IA
+                            </button>
+
+                            <!-- Loading State -->
+                            <div id="ai-loading" style="display: none; text-align: center; padding: 3rem 0;">
+                                <div style="width: 50px; height: 50px; border: 4px solid rgba(41, 121, 255, 0.2);
+                                     border-top-color: #2979ff; border-radius: 50%;
+                                     animation: spin 1s linear infinite; margin: 0 auto 1.5rem;"></div>
+                                <p style="color: #666; font-size: 1.1rem; margin: 0;">
+                                    La IA está generando tu contenido...
+                                </p>
+                                <small style="color: #999;">Esto toma solo unos segundos</small>
+                            </div>
+
+                            <!-- Result Section -->
+                            <div id="ai-result" style="display: none;">
+                                <div style="background: linear-gradient(135deg, rgba(0, 230, 118, 0.15), rgba(76, 175, 80, 0.1));
+                                     border: 2px solid #00e676; border-radius: 12px; padding: 1.5rem;
+                                     margin-bottom: 2rem; text-align: center;">
+                                    <i class="fas fa-check-circle" style="color: #00e676; font-size: 1.5rem;
+                                       margin-bottom: 0.5rem; display: block;"></i>
+                                    <h4 style="color: #1a237e; font-weight: 700; margin: 0;">
+                                        Contenido Generado Exitosamente
+                                    </h4>
+                                </div>
+
+                                <div id="ai-content" style="background: linear-gradient(135deg, rgba(41, 121, 255, 0.05), rgba(0, 188, 212, 0.05));
+                                     border-radius: 12px; padding: 2rem; margin-bottom: 2rem;
+                                     line-height: 1.8; color: #1a237e; max-height: 400px;
+                                     overflow-y: auto; font-size: 0.95rem;">
+                                    <!-- Contenido aquí -->
+                                </div>
+
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                    <button onclick="copyAIContent()" 
+                                            style="flex: 1; padding: 0.9rem; background: linear-gradient(135deg, #2979ff, #00bcd4);
+                                            color: white; border: none; border-radius: 10px; font-weight: 700;
+                                            cursor: pointer; transition: all 0.3s ease;">
+                                        <i class="fas fa-copy me-1"></i>Copiar Contenido
+                                    </button>
+                                    <button onclick="downloadAIContent()" 
+                                            style="flex: 1; padding: 0.9rem; background: white; color: #2979ff;
+                                            border: 2px solid #2979ff; border-radius: 10px; font-weight: 700;
+                                            cursor: pointer; transition: all 0.3s ease;">
+                                        <i class="fas fa-download me-1"></i>Descargar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Error State -->
+                            <div id="ai-error" style="display: none; background: linear-gradient(135deg, rgba(244, 67, 54, 0.15), rgba(211, 47, 47, 0.1));
+                                 border: 2px solid #f44336; border-radius: 12px; padding: 1.5rem;
+                                 color: #d32f2f; text-align: center;">
+                                <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></i>
+                                <p id="ai-error-message" style="margin: 0; font-weight: 600;">
+                                    Se produjo un error al generar el contenido
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- AI CAPABILITIES -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+                 position: relative; overflow: hidden; color: white;">
+
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px;
+                 background: rgba(0, 230, 118, 0.1); border-radius: 50%;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 1rem;">
+                        Capacidades de Nuestra <span style="color: #00ff88;">IA</span>
+                    </h2>
+                    <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">
+                        Potencia avanzada con Gemini AI para analizar y generar contenido de calidad profesional
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <!-- Capability 1 -->
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+                         border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; color: #00ff88;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                            Análisis Predictivo
+                        </h4>
+                        <p style="opacity: 0.9; font-size: 0.95rem;">
+                            Genera predicciones de demanda basadas en patrones históricos y condiciones climáticas
+                        </p>
+                    </div>
+
+                    <!-- Capability 2 -->
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+                         border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; color: #00bcd4;">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                            Impacto Ambiental
+                        </h4>
+                        <p style="opacity: 0.9; font-size: 0.95rem;">
+                            Calcula el impacto positivo de estacionamientos inteligentes en reducción de emisiones
+                        </p>
+                    </div>
+
+                    <!-- Capability 3 -->
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+                         border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; color: #ffc107;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                            Análisis Inteligente
+                        </h4>
+                        <p style="opacity: 0.9; font-size: 0.95rem;">
+                            Procesa datos complejos y genera insights detallados sobre movilidad urbana
+                        </p>
+                    </div>
+
+                    <!-- Capability 4 -->
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+                         border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; color: #ff9800;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                            Generación Automática
+                        </h4>
+                        <p style="opacity: 0.9; font-size: 0.95rem;">
+                            Crea contenido de calidad profesional en segundos sin intervención manual
+                        </p>
+                    </div>
+
+                    <!-- Capability 5 -->
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+                         border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; color: #4caf50;">
+                            <i class="fas fa-lightning-bolt"></i>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                            Procesamiento Rápido
+                        </h4>
+                        <p style="opacity: 0.9; font-size: 0.95rem;">
+                            Respuestas ultra-rápidas con latencia mínima, optimizadas para productividad
+                        </p>
+                    </div>
+
+                    <!-- Capability 6 -->
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+                         border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 15px 35px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; color: #2979ff;">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                            Contexto Avanzado
+                        </h4>
+                        <p style="opacity: 0.9; font-size: 0.95rem;">
+                            Entiende contexto complejo y adapta respuestas a tu industria específica
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXAMPLE OUTPUTS -->
+        <section style="padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #1a237e;
+                        margin-bottom: 1rem;">
+                        Ejemplos de <span style="color: #2979ff;">Contenido</span> Generado
+                    </h2>
+                    <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
+                        Mira qué tipo de contenido puede crear nuestra IA
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <!-- Example 1 -->
+                    <div style="background: white; border-radius: 15px; padding: 2rem;
+                         box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 4px solid #2979ff;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-8px)';
+                             this.style.boxShadow = '0 15px 40px rgba(41, 121, 255, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)'">
+                        <div style="font-weight: 700; color: #2979ff; margin-bottom: 0.75rem; font-size: 0.9rem;
+                             text-transform: uppercase; letter-spacing: 0.1em;">
+                            📊 Análisis Predictivo
+                        </div>
+                        <p style="color: #1a237e; margin: 0; line-height: 1.6; font-size: 0.95rem;">
+                            "Se espera un aumento del 45% en demanda de estacionamientos en horarios pico para 2025, 
+                            especialmente en zonas comerciales. La implementación de IA predictiva podría optimizar ocupación 
+                            en un 60%..."
+                        </p>
+                    </div>
+
+                    <!-- Example 2 -->
+                    <div style="background: white; border-radius: 15px; padding: 2rem;
+                         box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 4px solid #00e676;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-8px)';
+                             this.style.boxShadow = '0 15px 40px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)'">
+                        <div style="font-weight: 700; color: #00e676; margin-bottom: 0.75rem; font-size: 0.9rem;
+                             text-transform: uppercase; letter-spacing: 0.1em;">
+                            🌱 Impacto Ambiental
+                        </div>
+                        <p style="color: #1a237e; margin: 0; line-height: 1.6; font-size: 0.95rem;">
+                            "Implementar estacionamientos inteligentes reduciría tiempo de búsqueda promedio en 15 minutos por 
+                            usuario/día, lo que equivale a 3.2 toneladas de CO₂ evitadas anuales por cada 1000 usuarios..."
+                        </p>
+                    </div>
+
+                    <!-- Example 3 -->
+                    <div style="background: white; border-radius: 15px; padding: 2rem;
+                         box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 4px solid #00bcd4;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-8px)';
+                             this.style.boxShadow = '0 15px 40px rgba(0, 188, 212, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)'">
+                        <div style="font-weight: 700; color: #00bcd4; margin-bottom: 0.75rem; font-size: 0.9rem;
+                             text-transform: uppercase; letter-spacing: 0.1em;">
+                            🤖 Visión Futura
+                        </div>
+                        <p style="color: #1a237e; margin: 0; line-height: 1.6; font-size: 0.95rem;">
+                            "Para 2030, los estacionamientos serán nodos de carga eléctrica con IA autónoma. Integrados con 
+                            transporte público, bicicletas compartidas y vehículos autónomos, formando un ecosistema completo..."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section style="background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1e88e5 100%);
+                 padding: 120px 0; position: relative; overflow: hidden; color: white;">
+
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px;
+                 background: rgba(0, 230, 118, 0.1); border-radius: 50%; animation: float 8s infinite;"></div>
+            <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px;
+                 background: rgba(0, 188, 212, 0.1); border-radius: 50%; animation: float 10s infinite reverse;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1.5rem;">
+                        Empieza a Generar <span style="color: #00ff88;">Hoy</span>
+                    </h2>
+
+                    <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; line-height: 1.8;">
+                        No necesitas experiencia técnica. Solo elige un tema y deja que la IA haga el trabajo. 
+                        Genera análisis, predicciones y contenido en segundos.
+                    </p>
+
+                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+                        <a href="#generador-section" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: linear-gradient(135deg, #00ff88, #00e676);
+                           color: #0d1b2a; padding: 1.2rem 2.5rem; border-radius: 12px;
+                           text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                           box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
+                           transition: all 0.3s ease; border: none;">
+                            <i class="fas fa-rocket me-1"></i> Ir al Generador
+                        </a>
+                        <a th:href="@{/solicitar-acceso}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+                           color: white; padding: 1.2rem 2.5rem; border-radius: 12px;
+                           text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                           border: 2px solid rgba(255,255,255,0.4);
+                           transition: all 0.3s ease;">
+                            <i class="fas fa-building me-1"></i> Solicitar Acceso Panel
+                        </a>
+                    </div>
+
+                    <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <small style="opacity: 0.8;">
+                            <i class="fas fa-check-circle me-1"></i>
+                            Ilimitado • Gratis • Sin Registro
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-40px);
+                    }
+                }
+            </style>
+        </section>
+
+        <div th:replace="fragments/footer :: footer"></div>
+
+        <!-- JAVASCRIPT FUNCIONALIDAD -->
+        <script>
+            function updateCustomTopicVisibility() {
+                const topicSelect = document.getElementById('ai-topic-select');
+                const customContainer = document.getElementById('custom-topic-container');
+
+                if (topicSelect.value === 'personalizado') {
+                    customContainer.style.display = 'block';
+                    document.getElementById('ai-custom-topic').focus();
+                } else {
+                    customContainer.style.display = 'none';
+                }
+            }
+
+            function quickGenerate(tema) {
+                document.getElementById('ai-topic-select').value = tema;
+                updateCustomTopicVisibility();
+                document.getElementById('generador-section').scrollIntoView({behavior: 'smooth'});
+                setTimeout(() => generateAIContent(), 300);
+            }
+
+            function generateAIContent() {
+                const topicSelect = document.getElementById('ai-topic-select');
+                const customTopic = document.getElementById('ai-custom-topic').value;
+                const topic = topicSelect.value === 'personalizado' ? customTopic : topicSelect.value;
+
+                if (!topic) {
+                    alert('Por favor selecciona o escribe un tema');
+                    return;
+                }
+
+                // Mostrar loading
+                document.getElementById('ai-loading').style.display = 'block';
+                document.getElementById('ai-result').style.display = 'none';
+                document.getElementById('ai-error').style.display = 'none';
+
+                // Simular generación (en producción llamaría a tu API)
+                setTimeout(() => {
+                    document.getElementById('ai-loading').style.display = 'none';
+                    displayMockContent(topic);
+                    document.getElementById('ai-result').style.display = 'block';
+                }, 2000);
+            }
+
+            function displayMockContent(tema) {
+                const contenidos = {
+                    'vision': 'Para 2030, la movilidad urbana estará completamente transformada. Los estacionamientos inteligentes, potenciados por IA y conectados a nivel ciudad, optimizarán el uso del espacio urbano. Los vehículos autónomos eléctricos se integrarán de forma seamless con transporte público, bicicletas compartidas y sistemas de movilidad multimodal. Las ciudades verán reducción del 50% en emisiones de CO₂ y del 35% en congestión vehicular. La experiencia del usuario será completamente personalizada, con reservas automáticas, pagos sin contacto y navegación integrada. El futuro es ahora.',
+                    'beneficios': 'Los estacionamientos inteligentes traen beneficios revolucionarios: Para conductores: ahorro de 15+ minutos por búsqueda, reducción de estrés, acceso a precios dinámicos. Para negocios: monetización de espacios ociosos, aumento de clientes, análisis predictivo de demanda. Para ciudades: reducción de tráfico, mejora de aire urbano, datos para planificación. Con IA, la optimización es continua y adaptable. Se espera ROI positivo en 18 meses.',
+                    'sostenibilidad': 'La sostenibilidad es el corazón de Parkea Ya. Cada minuto ahorrado en búsqueda = 200g de CO₂ evitados. En una ciudad de 1M de personas, implementar nuestro sistema ahorraría 3.2M de toneladas anuales. Energía renovable en estacionamientos. Integración con VE (vehículos eléctricos). Reducción de congestión urbana. Espacios verdes reclamados de estacionamientos en superficie. Un futuro carbono-neutral es posible con movilidad inteligente.',
+                    'prediccion': 'Análisis de demanda 2024-2030: Crecimiento anual de 8.5% en usuarios de servicios de estacionamiento. Picos estacionales más pronunciados (navidad +40%, verano +25%). Tendencia creciente de VE (20% del parque en 2025, 60% en 2030). Integración modal aumentando (20% intermodal en 2025). Oportunidades en zonas comerciales (800% ROI potencial). Recomendación: Expandir cobertura en áreas metropolitanas con +100k habitantes.',
+                    'analisis': 'Análisis Ejecutivo: Parkea Ya representa una oportunidad de mercado de $45B globalmente. Barreras de entrada moderadas pero requerimos escala. Competencia emergente pero posición de liderazgo es alcanzable. Recomendación: Enfoque en ciudades Tier-1. Partnership con gobiernos municipales. Integración API con apps de movilidad existentes. Timeline: Rentabilidad en 24 meses con inversión adecuada.',
+                    'personalizado': 'Contenido generado basado en tu tema personalizado. La IA ha analizado tu solicitud y generado análisis relevante. Este es un ejemplo de cómo nuestra tecnología se adapta a cualquier pregunta o tema específico sobre movilidad urbana, estacionamientos inteligentes y transformación digital de ciudades.'
+                };
+
+                const content = contenidos[Object.keys(contenidos).includes(document.getElementById('ai-topic-select').value)
+                        ? document.getElementById('ai-topic-select').value
+                        : 'personalizado'];
+
+                document.getElementById('ai-content').innerHTML = content;
+            }
+
+            function copyAIContent() {
+                const content = document.getElementById('ai-content').innerText;
+                navigator.clipboard.writeText(content).then(() => {
+                    alert('✅ Contenido copiado al portapapeles');
+                }).catch(() => {
+                    alert('Error al copiar');
+                });
+            }
+
+            function downloadAIContent() {
+                const content = document.getElementById('ai-content').innerText;
+                const element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+                element.setAttribute('download', 'contenido-parkea-ya.txt');
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            }
+        </script>
+    </body>
+
+</html>

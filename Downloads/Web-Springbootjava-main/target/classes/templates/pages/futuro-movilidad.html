@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head th:replace="fragments/header :: head">
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+
+        <!-- HERO SECTION ÉPICO -->
+        <section style="background: linear-gradient(135deg, #0d1b2a 0%, #1a237e 40%, #283593 70%, #1e88e5 100%);
+                 position: relative; overflow: hidden; padding: 140px 0 100px; margin-top: 80px;">
+
+            <!-- Elementos decorativos animados -->
+            <div style="position: absolute; top: -150px; right: -100px; width: 500px; height: 500px;
+                 background: rgba(41, 121, 255, 0.15); border-radius: 50%;
+                 animation: float 8s ease-in-out infinite;"></div>
+            <div style="position: absolute; bottom: -100px; left: -150px; width: 400px; height: 400px;
+                 background: rgba(0, 230, 118, 0.08); border-radius: 50%;
+                 animation: float 10s ease-in-out infinite reverse;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div style="margin-bottom: 1.5rem;">
+                            <span style="display: inline-block; background: rgba(255,255,255,0.2);
+                                  backdrop-filter: blur(10px); color: white; padding: 0.75rem 1.5rem;
+                                  border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+                                  border: 1px solid rgba(255,255,255,0.3);">
+                                <i class="fas fa-rocket me-2"></i>El Futuro es Hoy
+                            </span>
+                        </div>
+
+                        <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; color: white;
+                            line-height: 1.15; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                            La Revolución de la <span style="background: linear-gradient(135deg, #00ff88, #00bcd4);
+                                                      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                                                      background-clip: text;">Movilidad Urbana</span>
+                        </h1>
+
+                        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.95); margin-bottom: 2rem;
+                           line-height: 1.8; max-width: 650px;">
+                            Descubre cómo la inteligencia artificial, los vehículos autónomos y los estacionamientos 
+                            inteligentes están construyendo las ciudades del mañana. Un futuro conectado, sostenible 
+                            y completamente transformado.
+                        </p>
+
+                        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <a th:href="@{/ia-generador}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                               background: linear-gradient(135deg, #00ff88, #00e676);
+                               color: #0d1b2a; padding: 1.2rem 2.5rem; border-radius: 12px;
+                               text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                               box-shadow: 0 15px 35px rgba(0, 255, 136, 0.3);
+                               transition: all 0.3s ease; border: none;">
+                                <i class="fas fa-brain me-1"></i> Explorar con IA
+                            </a>
+                            <a th:href="@{/solicitar-acceso}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                               background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+                               color: white; padding: 1.2rem 2.5rem; border-radius: 12px;
+                               text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                               border: 2px solid rgba(255,255,255,0.4);
+                               transition: all 0.3s ease;">
+                                <i class="fas fa-arrow-right me-1"></i> Sé Parte del Cambio
+                            </a>
+                        </div>
+
+                        <!-- Mini stats -->
+                        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 900; color: #00ff88;">2030</div>
+                                <small style="color: rgba(255,255,255,0.8);">Año Clave</small>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 900; color: #00bcd4;">80%</div>
+                                <small style="color: rgba(255,255,255,0.8);">Ciudades Conectadas</small>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.8rem; font-weight: 900; color: #ffff00;">-50%</div>
+                                <small style="color: rgba(255,255,255,0.8);">Emisiones</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5" style="text-align: center; perspective: 1000px;">
+                        <div style="position: relative; display: inline-block;">
+                            <div style="width: 100%; max-width: 400px; aspect-ratio: 1;
+                                 background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 188, 212, 0.2));
+                                 border-radius: 30px; border: 2px solid rgba(255,255,255,0.2);
+                                 display: flex; align-items: center; justify-content: center;
+                                 box-shadow: 0 25px 50px rgba(0,0,0,0.3), inset 0 0 60px rgba(0, 230, 118, 0.1);
+                                 animation: float 5s ease-in-out infinite;">
+                                <i class="fas fa-city" style="font-size: 150px; color: rgba(255,255,255,0.3);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-30px);
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- SECCIÓN DE VISIONES CON LAYOUT ALTERNADO -->
+        <section style="padding: 120px 0; background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 6rem;">
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; color: #1a237e;
+                        margin-bottom: 1rem;">
+                        Tres Pilares del <span style="color: #2979ff;">Futuro</span>
+                    </h2>
+                    <p style="font-size: 1.15rem; color: #666; max-width: 650px; margin: 0 auto; line-height: 1.8;">
+                        La transformación de la movilidad urbana se basa en tres ejes fundamentales que trabajarán en armonía
+                    </p>
+                </div>
+
+                <!-- VISIÓN 1: IA AUTÓNOMA -->
+                <div class="row align-items-center mb-5 g-5" style="margin-bottom: 6rem;">
+                    <div class="col-lg-6" style="order: 2;">
+                        <div style="position: relative; height: 400px; background: linear-gradient(135deg, rgba(41, 121, 255, 0.15), rgba(0, 188, 212, 0.15));
+                             border-radius: 25px; display: flex; align-items: center; justify-content: center;
+                             box-shadow: 0 20px 50px rgba(41, 121, 255, 0.1); overflow: hidden;">
+                            <i class="fas fa-robot" style="font-size: 120px; color: rgba(41, 121, 255, 0.3);"></i>
+
+                            <!-- Animated elements -->
+                            <div style="position: absolute; top: 20px; right: 30px; width: 80px; height: 80px;
+                                 background: rgba(41, 121, 255, 0.2); border-radius: 15px;
+                                 animation: pulse 3s ease-in-out infinite;"></div>
+                            <div style="position: absolute; bottom: 30px; left: 20px; width: 60px; height: 60px;
+                                 background: rgba(0, 188, 212, 0.2); border-radius: 50%;
+                                 animation: pulse 4s ease-in-out infinite;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" style="order: 1;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <span style="display: inline-block; background: rgba(41, 121, 255, 0.15); color: #2979ff;
+                                  padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                                🤖 VISIÓN 1
+                            </span>
+                        </div>
+
+                        <h3 style="font-size: 2.2rem; font-weight: 900; color: #1a237e; margin-bottom: 1.2rem; line-height: 1.3;">
+                            Gestión <span style="color: #2979ff;">Autónoma</span> Inteligente
+                        </h3>
+
+                        <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; line-height: 1.8; max-width: 550px;">
+                            Los sistemas de estacionamiento operarán de forma completamente autónoma, optimizando espacios 
+                            y flujos vehiculares sin intervención humana mediante algoritmos avanzados de machine learning.
+                        </p>
+
+                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem;">
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2979ff, #00bcd4);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">1</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Asignación Automática</strong>
+                                    <small style="color: #999;">Plazas reservadas por IA en tiempo real</small>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2979ff, #00bcd4);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">2</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Predicción de Demanda</strong>
+                                    <small style="color: #999;">Análisis predictivo de patrones de uso</small>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2979ff, #00bcd4);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">3</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Optimización Continua</strong>
+                                    <small style="color: #999;">Aprendizaje automático 24/7</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- VISIÓN 2: MOVILIDAD ELÉCTRICA -->
+                <div class="row align-items-center mb-5 g-5" style="margin-bottom: 6rem;">
+                    <div class="col-lg-6">
+                        <div style="position: relative; height: 400px; background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(0, 230, 118, 0.15));
+                             border-radius: 25px; display: flex; align-items: center; justify-content: center;
+                             box-shadow: 0 20px 50px rgba(255, 152, 0, 0.1); overflow: hidden;">
+                            <i class="fas fa-bolt" style="font-size: 120px; color: rgba(255, 152, 0, 0.3);"></i>
+
+                            <div style="position: absolute; top: 30px; left: 30px; width: 70px; height: 70px;
+                                 background: rgba(255, 152, 0, 0.2); border-radius: 50%;
+                                 animation: pulse 3s ease-in-out infinite;"></div>
+                            <div style="position: absolute; bottom: 40px; right: 25px; width: 80px; height: 80px;
+                                 background: rgba(0, 230, 118, 0.2); border-radius: 15px;
+                                 animation: pulse 4s ease-in-out infinite;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div style="margin-bottom: 1.5rem;">
+                            <span style="display: inline-block; background: rgba(255, 152, 0, 0.15); color: #ff9800;
+                                  padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                                ⚡ VISIÓN 2
+                            </span>
+                        </div>
+
+                        <h3 style="font-size: 2.2rem; font-weight: 900; color: #1a237e; margin-bottom: 1.2rem; line-height: 1.3;">
+                            Movilidad <span style="color: #ff9800;">Eléctrica</span> Integrada
+                        </h3>
+
+                        <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; line-height: 1.8; max-width: 550px;">
+                            Los estacionamientos se transformarán en hubs de carga masiva para vehículos eléctricos, 
+                            facilitando la transición energética y creando una red sostenible en toda la ciudad.
+                        </p>
+
+                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem;">
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ff9800, #ffc107);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">1</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Carga Ultra-Rápida</strong>
+                                    <small style="color: #999;">80% de batería en 20 minutos</small>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ff9800, #ffc107);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">2</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Energía Renovable</strong>
+                                    <small style="color: #999;">Integración solar y eólica</small>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ff9800, #ffc107);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">3</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Emisiones Cero</strong>
+                                    <small style="color: #999;">Ciclo de vida completamente limpio</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- VISIÓN 3: ECOSISTEMA CONECTADO -->
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6" style="order: 2;">
+                        <div style="position: relative; height: 400px; background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(33, 150, 243, 0.15));
+                             border-radius: 25px; display: flex; align-items: center; justify-content: center;
+                             box-shadow: 0 20px 50px rgba(0, 188, 212, 0.1); overflow: hidden;">
+                            <i class="fas fa-network-wired" style="font-size: 120px; color: rgba(0, 188, 212, 0.3);"></i>
+
+                            <div style="position: absolute; top: 20px; right: 25px; width: 75px; height: 75px;
+                                 background: rgba(0, 188, 212, 0.2); border-radius: 50%;
+                                 animation: pulse 3s ease-in-out infinite;"></div>
+                            <div style="position: absolute; bottom: 35px; left: 30px; width: 65px; height: 65px;
+                                 background: rgba(33, 150, 243, 0.2); border-radius: 15px;
+                                 animation: pulse 4s ease-in-out infinite;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" style="order: 1;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <span style="display: inline-block; background: rgba(0, 188, 212, 0.15); color: #00bcd4;
+                                  padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                                🌐 VISIÓN 3
+                            </span>
+                        </div>
+
+                        <h3 style="font-size: 2.2rem; font-weight: 900; color: #1a237e; margin-bottom: 1.2rem; line-height: 1.3;">
+                            Ecosistema de Movilidad <span style="color: #00bcd4;">Conectada</span>
+                        </h3>
+
+                        <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; line-height: 1.8; max-width: 550px;">
+                            Los estacionamientos serán nodos clave en un ecosistema completo de movilidad urbana, 
+                            integrados con transporte público, bicicletas compartidas y servicios multimodales.
+                        </p>
+
+                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem;">
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00bcd4, #0097a7);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">1</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Integración Multimodal</strong>
+                                    <small style="color: #999;">Bus, Metro, Bici, Auto en una plataforma</small>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00bcd4, #0097a7);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">2</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Datos Abiertos</strong>
+                                    <small style="color: #999;">Información accesible para planificación urbana</small>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00bcd4, #0097a7);
+                                     border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                                     color: white; font-weight: 700; flex-shrink: 0;">3</div>
+                                <div>
+                                    <strong style="color: #1a237e; display: block;">Experiencia Unificada</strong>
+                                    <small style="color: #999;">Reserva, paga y viaja desde una app</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes pulse {
+                    0%, 100% {
+                        transform: scale(1);
+                        opacity: 0.5;
+                    }
+                    50% {
+                        transform: scale(1.1);
+                        opacity: 0.8;
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- ESTADÍSTICAS FUTURO 2030 -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, #1a237e 0%, #283593 100%); position: relative; overflow: hidden;">
+
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px;
+                 background: rgba(0, 230, 118, 0.1); border-radius: 50%;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: white; margin-bottom: 1rem;">
+                        Proyecciones para <span style="color: #00ff88;">2030</span>
+                    </h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <!-- Stat 1 -->
+                    <div style="background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 230, 118, 0.1));
+                         border: 2px solid rgba(0, 255, 136, 0.3); border-radius: 20px; padding: 2rem;
+                         text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(0, 255, 136, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; font-weight: 900; color: #00ff88; margin-bottom: 0.5rem;">
+                            80%
+                        </div>
+                        <h4 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">
+                            Ciudades Inteligentes
+                        </h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                            Con sistemas de movilidad integrados y autónomos
+                        </p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(0, 150, 200, 0.1));
+                         border: 2px solid rgba(0, 188, 212, 0.3); border-radius: 20px; padding: 2rem;
+                         text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(0, 188, 212, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; font-weight: 900; color: #00bcd4; margin-bottom: 0.5rem;">
+                            -50%
+                        </div>
+                        <h4 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">
+                            Emisiones de CO₂
+                        </h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                            Reducción en transporte urbano vs 2020
+                        </p>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+                         border: 2px solid rgba(255, 193, 7, 0.3); border-radius: 20px; padding: 2rem;
+                         text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(255, 193, 7, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; font-weight: 900; color: #ffc107; margin-bottom: 0.5rem;">
+                            +200%
+                        </div>
+                        <h4 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">
+                            Vehículos Eléctricos
+                        </h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                            Incremento en circulación y adopción global
+                        </p>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(56, 142, 60, 0.1));
+                         border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 20px; padding: 2rem;
+                         text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(76, 175, 80, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; font-weight: 900; color: #4caf50; margin-bottom: 0.5rem;">
+                            -35%
+                        </div>
+                        <h4 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">
+                            Tráfico Congestionado
+                        </h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                            Optimización mediante movilidad inteligente
+                        </p>
+                    </div>
+
+                    <!-- Stat 5 -->
+                    <div style="background: linear-gradient(135deg, rgba(156, 39, 176, 0.15), rgba(123, 31, 162, 0.1));
+                         border: 2px solid rgba(156, 39, 176, 0.3); border-radius: 20px; padding: 2rem;
+                         text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(156, 39, 176, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; font-weight: 900; color: #9c27b0; margin-bottom: 0.5rem;">
+                            +90%
+                        </div>
+                        <h4 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">
+                            Satisfacción Usuarios
+                        </h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                            Experiencia de movilidad mejorada significativamente
+                        </p>
+                    </div>
+
+                    <!-- Stat 6 -->
+                    <div style="background: linear-gradient(135deg, rgba(244, 67, 54, 0.15), rgba(211, 47, 47, 0.1));
+                         border: 2px solid rgba(244, 67, 54, 0.3); border-radius: 20px; padding: 2rem;
+                         text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(244, 67, 54, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)'; this.style.boxShadow = 'none'">
+                        <div style="font-size: 3rem; font-weight: 900; color: #f44336; margin-bottom: 0.5rem;">
+                            0
+                        </div>
+                        <h4 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">
+                            Accidentes de Tránsito
+                        </h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                            Con vehículos autónomos completamente seguros
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE VISUAL -->
+        <section style="padding: 120px 0; background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #1a237e; margin-bottom: 1rem;">
+                        La Evolución del <span style="color: #2979ff;">Futuro</span>
+                    </h2>
+                    <p style="font-size: 1.1rem; color: #666; max-width: 650px; margin: 0 auto;">
+                        Un camino progresivo hacia la movilidad urbana del mañana
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div style="position: relative; max-width: 900px; margin: 0 auto;">
+                    <!-- Línea central -->
+                    <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%;
+                         background: linear-gradient(to bottom, #2979ff, #00bcd4, #00e676);
+                         border-radius: 2px;"></div>
+
+                    <!-- Timeline Item 1 -->
+                    <div style="margin-bottom: 3rem;">
+                        <div style="display: flex; gap: 2rem; align-items: center;">
+                            <div style="flex: 1; text-align: right;">
+                                <div style="background: white; border-radius: 15px; padding: 1.5rem;
+                                     box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 4px solid #2979ff;">
+                                    <div style="font-weight: 700; color: #2979ff; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                                        Fase 1: 2025-2026
+                                    </div>
+                                    <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.5rem;">
+                                        Expansión de IA
+                                    </h4>
+                                    <p style="color: #666; font-size: 0.95rem; margin: 0;">
+                                        Implementación masiva de sistemas predictivos en ciudades principales
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="width: 24px; height: 24px; background: #2979ff; border: 4px solid white;
+                                 border-radius: 50%; box-shadow: 0 0 0 4px #2979ff; flex-shrink: 0;"></div>
+                            <div style="flex: 1;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div style="margin-bottom: 3rem;">
+                        <div style="display: flex; gap: 2rem; align-items: center; flex-direction: row-reverse;">
+                            <div style="flex: 1; text-align: left;">
+                                <div style="background: white; border-radius: 15px; padding: 1.5rem;
+                                     box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 4px solid #00bcd4;">
+                                    <div style="font-weight: 700; color: #00bcd4; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                                        Fase 2: 2027-2028
+                                    </div>
+                                    <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.5rem;">
+                                        Revolución Eléctrica
+                                    </h4>
+                                    <p style="color: #666; font-size: 0.95rem; margin: 0;">
+                                        Transformación de infraestructura: carga rápida en estacionamientos
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="width: 24px; height: 24px; background: #00bcd4; border: 4px solid white;
+                                 border-radius: 50%; box-shadow: 0 0 0 4px #00bcd4; flex-shrink: 0;"></div>
+                            <div style="flex: 1;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div style="margin-bottom: 3rem;">
+                        <div style="display: flex; gap: 2rem; align-items: center;">
+                            <div style="flex: 1; text-align: right;">
+                                <div style="background: white; border-radius: 15px; padding: 1.5rem;
+                                     box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-left: 4px solid #00e676;">
+                                    <div style="font-weight: 700; color: #00e676; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                                        Fase 3: 2029-2030
+                                    </div>
+                                    <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.5rem;">
+                                        Ecosistema Conectado
+                                    </h4>
+                                    <p style="color: #666; font-size: 0.95rem; margin: 0;">
+                                        Integración total: movilidad compartida, autónoma y completamente sostenible
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="width: 24px; height: 24px; background: #00e676; border: 4px solid white;
+                                 border-radius: 50%; box-shadow: 0 0 0 4px #00e676; flex-shrink: 0;"></div>
+                            <div style="flex: 1;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS FUTUROS GRID -->
+        <section style="padding: 100px 0; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #1a237e; margin-bottom: 1rem;">
+                        Beneficios que Veremos en <span style="color: #2979ff;">2030</span>
+                    </h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Benefit 1 -->
+                    <div style="background: linear-gradient(135deg, rgba(41, 121, 255, 0.1), rgba(0, 188, 212, 0.1));
+                         border: 2px solid #2979ff; border-radius: 20px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)'; this.style.boxShadow = '0 20px 40px rgba(41, 121, 255, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)'">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #2979ff;">
+                            <i class="fas fa-hourglass-end"></i>
+                        </div>
+                        <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.75rem;">
+                            Cero Tiempo de Búsqueda
+                        </h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            La IA asignará estacionamiento automáticamente antes de que salgas de casa
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div style="background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(76, 175, 80, 0.1));
+                         border: 2px solid #00e676; border-radius: 20px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 20px 40px rgba(0, 230, 118, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)'">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #00e676;">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.75rem;">
+                            Aire Limpio
+                        </h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            Reducción masiva de contaminación en centros urbanos. Ciudades más verdes y saludables
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div style="background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 193, 7, 0.1));
+                         border: 2px solid #ff9800; border-radius: 20px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 20px 40px rgba(255, 152, 0, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)'">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ff9800;">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.75rem;">
+                            Energía Renovable
+                        </h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            Estacionamientos como generadores de energía limpia e integrados a la red urbana
+                        </p>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(33, 150, 243, 0.1));
+                         border: 2px solid #00bcd4; border-radius: 20px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 20px 40px rgba(0, 188, 212, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)'">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #00bcd4;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.75rem;">
+                            Ciudades Inteligentes
+                        </h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            Datos en tiempo real para planificación urbana y toma de decisiones informadas
+                        </p>
+                    </div>
+
+                    <!-- Benefit 5 -->
+                    <div style="background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(103, 58, 183, 0.1));
+                         border: 2px solid #9c27b0; border-radius: 20px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 20px 40px rgba(156, 39, 176, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)'">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #9c27b0;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.75rem;">
+                            Cero Accidentes
+                        </h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            Vehículos autónomos completamente seguros. Reducción de lesiones y muertes en vías
+                        </p>
+                    </div>
+
+                    <!-- Benefit 6 -->
+                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(56, 142, 60, 0.1));
+                         border: 2px solid #4caf50; border-radius: 20px; padding: 2rem;
+                         transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform = 'translateY(-10px)';
+                             this.style.boxShadow = '0 20px 40px rgba(76, 175, 80, 0.2)'"
+                         onmouseout="this.style.transform = 'translateY(0)';
+                             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)'">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #4caf50;">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h4 style="color: #1a237e; font-weight: 700; margin-bottom: 0.75rem;">
+                            Calidad de Vida
+                        </h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            Menos estrés, menos tiempo perdido, más tiempo para lo importante
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL ÉPICO -->
+        <section style="background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1e88e5 100%);
+                 padding: 120px 0; position: relative; overflow: hidden; color: white;">
+
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px;
+                 background: rgba(0, 230, 118, 0.1); border-radius: 50%; animation: float 8s infinite;"></div>
+            <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px;
+                 background: rgba(0, 188, 212, 0.1); border-radius: 50%; animation: float 10s infinite reverse;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1.5rem;">
+                        El Futuro Comienza <span style="color: #00ff88;">Hoy</span>
+                    </h2>
+
+                    <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; line-height: 1.8;">
+                        No esperes al 2030. Sé parte de la revolución de la movilidad urbana desde ahora. 
+                        Únete a Parkea Ya y ayuda a construir las ciudades del mañana.
+                    </p>
+
+                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+                        <a th:href="@{/ia-generador}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: linear-gradient(135deg, #00ff88, #00e676);
+                           color: #0d1b2a; padding: 1.2rem 2.5rem; border-radius: 12px;
+                           text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                           box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
+                           transition: all 0.3s ease; border: none;">
+                            <i class="fas fa-robot me-1"></i> Genera tu Visión con IA
+                        </a>
+                        <a th:href="@{/solicitar-acceso}" style="display: inline-flex; align-items: center; gap: 0.75rem;
+                           background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+                           color: white; padding: 1.2rem 2.5rem; border-radius: 12px;
+                           text-decoration: none; font-weight: 700; font-size: 1.05rem;
+                           border: 2px solid rgba(255,255,255,0.4);
+                           transition: all 0.3s ease;">
+                            <i class="fas fa-rocket me-1"></i> Solicitar Acceso Ahora
+                        </a>
+                    </div>
+
+                    <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <small style="opacity: 0.8;">
+                            <i class="fas fa-check-circle me-1"></i>
+                            Gratis • Sin Compromiso • Soporte 24/7
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-40px);
+                    }
+                }
+            </style>
+        </section>
+
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
+
+</html>

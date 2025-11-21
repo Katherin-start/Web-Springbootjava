@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<link th:href="@{/css/ai-components.css}" rel="stylesheet">
+<div th:fragment="ai-widget">
+    <!-- AI Widget Section -->
+    <section class="ai-widget-section py-5" style="background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="ai-widget-card rounded-4 p-5 position-relative overflow-hidden"
+                        style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1);">
+
+                        <!-- Efecto de partículas de fondo -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
+                            <div class="position-absolute"
+                                style="top: 20%; left: 10%; width: 4px; height: 4px; background: rgba(41, 121, 255, 0.3); border-radius: 50%;">
+                            </div>
+                            <div class="position-absolute"
+                                style="top: 60%; left: 80%; width: 3px; height: 3px; background: rgba(0, 188, 212, 0.3); border-radius: 50%;">
+                            </div>
+                            <div class="position-absolute"
+                                style="top: 80%; left: 30%; width: 2px; height: 2px; background: rgba(0, 230, 118, 0.3); border-radius: 50%;">
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center position-relative" style="z-index: 2;">
+                            <div class="col-md-8">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="ai-icon-wrapper me-3">
+                                        <i class="fas fa-robot fa-2x" style="color: #2979ff;"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-0 text-white">
+                                        Asistente IA Parkea Ya
+                                    </h3>
+                                </div>
+
+                                <p class="text-light mb-4" style="opacity: 0.9; line-height: 1.7;">
+                                    Nuestra inteligencia artificial de última generación analiza patrones de tráfico en
+                                    tiempo real,
+                                    predice disponibilidad de estacionamiento y optimiza la movilidad urbana mediante
+                                    algoritmos
+                                    avanzados de machine learning.
+                                </p>
+
+                                <div class="d-flex gap-3 flex-wrap">
+                                    <span class="badge rounded-pill px-3 py-2"
+                                        style="background: rgba(41, 121, 255, 0.2); color: #2979ff; border: 1px solid rgba(41, 121, 255, 0.3);">
+                                        <i class="fas fa-bolt me-1"></i>Tiempo Real
+                                    </span>
+                                    <span class="badge rounded-pill px-3 py-2"
+                                        style="background: rgba(0, 230, 118, 0.2); color: #00e676; border: 1px solid rgba(0, 230, 118, 0.3);">
+                                        <i class="fas fa-chart-line me-1"></i>Predicciones
+                                    </span>
+                                    <span class="badge rounded-pill px-3 py-2"
+                                        style="background: rgba(0, 188, 212, 0.2); color: #00bcd4; border: 1px solid rgba(0, 188, 212, 0.3);">
+                                        <i class="fas fa-cogs me-1"></i>Optimización
+                                    </span>
+                                    <span class="badge rounded-pill px-3 py-2"
+                                        style="background: rgba(156, 39, 176, 0.2); color: #9c27b0; border: 1px solid rgba(156, 39, 176, 0.3);">
+                                        <i class="fas fa-brain me-1"></i>Machine Learning
+                                    </span>
+                                </div>
+
+                                <!-- Stats en línea -->
+                                <div class="row mt-4 g-3">
+                                    <div class="col-4 text-center">
+                                        <div class="stat-mini">
+                                            <div class="h5 mb-1 text-primary fw-bold">99.8%</div>
+                                            <small class="text-muted">Precisión</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="stat-mini">
+                                            <div class="h5 mb-1 text-success fw-bold">≤2s</div>
+                                            <small class="text-muted">Respuesta</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="stat-mini">
+                                            <div class="h5 mb-1 text-info fw-bold">24/7</div>
+                                            <small class="text-muted">Disponibilidad</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 text-center">
+                                <div class="ai-main-icon mb-4">
+                                    <div class="position-relative d-inline-block">
+                                        <div class="p-4 rounded-circle"
+                                            style="background: linear-gradient(135deg, rgba(41, 121, 255, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%); border: 2px solid rgba(41, 121, 255, 0.3);">
+                                            <i class="fas fa-brain fa-4x"
+                                                style="background: linear-gradient(135deg, #2979ff, #00bcd4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"></i>
+                                        </div>
+                                        <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle"
+                                            style="border: 1px solid rgba(41, 121, 255, 0.2); animation: pulse 2s infinite;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="btn btn-lg fw-bold px-4 py-3 rounded-pill position-relative overflow-hidden"
+                                    style="background: linear-gradient(135deg, #2979ff 0%, #00bcd4 100%); border: none; color: white; transition: all 0.3s ease;">
+                                    <i class="fas fa-play me-2"></i>Probar IA
+                                    <div class="position-absolute top-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                                    </div>
+                                </button>
+
+                                <div class="mt-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-shield-alt me-1"></i>
+                                        Seguro & Confiable
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</html>
