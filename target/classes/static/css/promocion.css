@@ -1,0 +1,444 @@
+/* styles-promocion.css - Extensión del diseño azul oscuro para promoción */
+
+/* Hero Banner Personalizado para Promoción */
+.hero-banner-promocion {
+    background: var(--gradient-dark);
+    padding: 100px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner-promocion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(41,121,255,0.1)" points="0,800 800,0 1000,200 200,1000"/></svg>');
+    background-size: cover;
+}
+
+.hero-banner-promocion .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenido Principal de Promoción */
+.promocion-content {
+    background: var(--background-white);
+    padding: 80px 0;
+}
+
+/* Form Section */
+.form-solicitud {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-solicitud::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-accent);
+}
+
+.form-solicitud h2 {
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.form-solicitud .lead {
+    color: var(--text-dark);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-control:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(41, 121, 255, 0.1);
+    background: white;
+}
+
+.form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(41, 121, 255, 0.1);
+}
+
+/* Botón del formulario */
+.btn-primary {
+    background: var(--gradient-accent);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+    background: linear-gradient(135deg, #1e88e5 0%, #00acc1 100%);
+}
+
+/* Benefits Summary */
+.benefits-summary {
+    margin-top: 4rem !important;
+}
+
+.benefits-summary h3 {
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.benefit-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-blue);
+}
+
+.benefit-item h5 {
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.benefit-item .fas {
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: var(--background-light) !important;
+    padding: 100px 0;
+}
+
+.testimonials h2.display-5 {
+    color: var(--primary-dark);
+    font-weight: 800;
+}
+
+.testimonial {
+    background: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.testimonial-avatar .fas {
+    color: var(--accent-blue) !important;
+}
+
+.testimonial .card-text {
+    color: var(--text-dark);
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.user-info strong {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.user-info .text-muted {
+    color: var(--text-gray) !important;
+}
+
+/* Final CTA Section */
+.final-cta {
+    background: var(--gradient-primary) !important;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="rgba(255,255,255,0.05)" cx="500" cy="500" r="400"/></svg>');
+}
+
+.final-cta h2 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.final-cta .lead {
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    margin-bottom: 2.5rem;
+}
+
+.final-cta .btn-light {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-dark);
+    border-radius: 12px;
+    padding: 15px 35px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow-heavy);
+}
+
+.final-cta .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+/* Iconos específicos para promoción */
+.fa-tachometer-alt {
+    color: var(--accent-blue) !important;
+}
+
+.fa-robot {
+    color: var(--accent-green) !important;
+}
+
+.fa-chart-bar {
+    color: var(--accent-teal) !important;
+}
+
+.fa-cogs {
+    color: var(--warning) !important;
+}
+
+.fa-user-circle {
+    color: var(--accent-blue) !important;
+}
+
+.fa-arrow-down {
+    color: var(--primary-dark);
+}
+
+/* Estados de formulario */
+.form-control.is-valid {
+    border-color: var(--success);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-control.is-invalid {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+
+.valid-feedback {
+    color: var(--success);
+    font-weight: 500;
+}
+
+.invalid-feedback {
+    color: var(--error);
+    font-weight: 500;
+}
+
+/* Animaciones para elementos del formulario */
+.form-solicitud {
+    animation: slideUp 0.6s ease-out;
+}
+
+.benefit-item {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.testimonial {
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design para Promoción */
+@media (max-width: 768px) {
+    .promocion-content {
+        padding: 60px 0;
+    }
+    
+    .form-solicitud {
+        padding: 2rem;
+    }
+    
+    .benefit-item {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .testimonials {
+        padding: 60px 0;
+    }
+    
+    .final-cta {
+        padding: 60px 0;
+    }
+    
+    .hero-banner-promocion {
+        padding: 80px 0 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-solicitud {
+        padding: 1.5rem;
+    }
+    
+    .benefit-item {
+        padding: 1.25rem;
+    }
+    
+    .benefit-item .fas {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Efectos de enfoque para accesibilidad */
+.form-control:focus,
+.form-select:focus,
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 3px rgba(41, 121, 255, 0.3) !important;
+}
+
+/* Mejoras de legibilidad */
+.text-muted {
+    color: var(--text-gray) !important;
+}
+
+.bg-light {
+    background-color: var(--background-light) !important;
+}
+
+.text-primary {
+    color: var(--accent-blue) !important;
+}
+
+.text-success {
+    color: var(--accent-green) !important;
+}
+
+.text-info {
+    color: var(--accent-teal) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+/* Badges y etiquetas */
+.badge {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+.bg-primary {
+    background: var(--accent-blue) !important;
+}
+
+.bg-success {
+    background: var(--success) !important;
+}
+
+.bg-info {
+    background: var(--accent-teal) !important;
+}

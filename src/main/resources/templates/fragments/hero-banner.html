@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<div th:fragment="hero-banner">
+    <!-- Hero Banner for promotion pages -->
+    <div class="hero-banner-promocion" style="background: linear-gradient(135deg, #0d1b2a 0%, #1a237e 100%); padding: 100px 0 60px; position: relative; overflow: hidden; margin-top: 80px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold text-white mb-3" th:text="${titulo}">Solicitar Acceso al Panel</h1>
+                    <p class="lead mb-4 text-white" style="opacity: 0.9;">
+                        Únete a la revolución del estacionamiento inteligente. Accede al panel general 
+                        de Parkea Ya y comienza a transformar la movilidad urbana en tu ciudad.
+                    </p>
+                    
+                    <div class="hero-features">
+                        <div class="row">
+                            <div class="col-sm-4 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-chart-line fa-2x me-3" style="color: #00bcd4;"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-white">Dashboard Avanzado</h6>
+                                        <small class="text-white" style="opacity: 0.8;">Métricas en tiempo real</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-robot fa-2x me-3" style="color: #2979ff;"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-white">Predicciones IA</h6>
+                                        <small class="text-white" style="opacity: 0.8;">Análisis inteligente</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-cogs fa-2x me-3 text-white"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-white">Gestión Completa</h6>
+                                        <small class="text-white" style="opacity: 0.8;">Control total del sistema</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center">
+                    <div class="hero-stats bg-white rounded-3 p-4 shadow" style="border: 1px solid rgba(255,255,255,0.2);">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-tachometer-alt me-2"></i>Estadísticas del Sistema
+                        </h5>
+                        <div class="stat-item mb-2">
+                            <small class="text-muted">Estacionamientos Monitoreados</small>
+                            <h4 class="text-primary mb-0">1,250+</h4>
+                        </div>
+                        <div class="stat-item mb-2">
+                            <small class="text-muted">Reducción de Emisiones</small>
+                            <h4 class="text-success mb-0">-35%</h4>
+                        </div>
+                        <div class="stat-item">
+                            <small class="text-muted">Satisfacción de Usuarios</small>
+                            <h4 class="text-warning mb-0">94%</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="quick-stats mb-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-3 border rounded bg-white shadow-sm">
+                        <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                        <h4 class="mb-1">500+</h4>
+                        <small class="text-muted">Usuarios Activos</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-3 border rounded bg-white shadow-sm">
+                        <i class="fas fa-map-marker-alt fa-2x text-success mb-2"></i>
+                        <h4 class="mb-1">25+</h4>
+                        <small class="text-muted">Ciudades</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-3 border rounded bg-white shadow-sm">
+                        <i class="fas fa-car fa-2x text-info mb-2"></i>
+                        <h4 class="mb-1">50K+</h4>
+                        <small class="text-muted">Estacionamientos/día</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-3 border rounded bg-white shadow-sm">
+                        <i class="fas fa-leaf fa-2x text-warning mb-2"></i>
+                        <h4 class="mb-1">15T+</h4>
+                        <small class="text-muted">CO₂ Ahorrado</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
